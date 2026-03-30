@@ -191,10 +191,18 @@
     }
     .service-content h3 { color: white; font-size: 1.2rem; font-weight: 800; margin-bottom: 8px; }
     .service-content p { color: rgba(255,255,255,0.8); font-size: 13px; line-height: 1.5; margin-bottom: 16px; }
+    .service-actions { display: flex; align-items: center; gap: 10px; }
+    .btn-contrate {
+      flex: 1; background: var(--orange); color: white; padding: 10px 16px;
+      border-radius: 25px; font-size: 13px; font-weight: 700; text-decoration: none;
+      display: inline-flex; align-items: center; justify-content: center; gap: 6px;
+      transition: background 0.2s; white-space: nowrap;
+    }
+    .btn-contrate:hover { background: var(--orange-dark); }
     .service-arrow {
       width: 36px; height: 36px; background: var(--teal); border-radius: 50%;
       display: flex; align-items: center; justify-content: center; color: white;
-      text-decoration: none; font-size: 14px; transition: background 0.2s;
+      text-decoration: none; font-size: 14px; transition: background 0.2s; flex-shrink: 0;
     }
     .service-arrow:hover { background: var(--orange); }
     .why-box {
@@ -353,7 +361,7 @@
     <h1>Crédito rápido e<br /><span>sem burocracia</span></h1>
     <p>Aposentados, pensionistas e trabalhadores CLT: realize seus sonhos com as melhores taxas do mercado e aprovação na hora.</p>
     <div class="hero-btns">
-      <a href="https://wa.me/5524988181891?text=Ol%C3%A1%21%20Quero%20simular%20um%20empr%C3%A9stimo%20consignado." class="btn-primary" target="_blank">
+      <a href="https://wa.me/5524988181891?text=Ol%C3%A1%21%20Quero%20simular%20um%20empr%C3%A9stimo%20consignado." class="btn-primary" target="_blank" rel="noopener noreferrer">
         <i class="fab fa-whatsapp"></i> Falar Agora
       </a>
       <a href="#simule" class="btn-secondary">
@@ -428,7 +436,7 @@
           <i class="fas fa-check-circle"></i>
           <h4>Abrindo WhatsApp... 🎉</h4>
           <p>Ótimo, <strong id="res-nome"></strong>! Nossa assistente virtual Maria já está pronta para te atender. Se o WhatsApp não abriu automaticamente, clique abaixo:</p>
-          <a href="#" id="wpp-link" class="btn-wpp" target="_blank"><i class="fab fa-whatsapp"></i> Abrir WhatsApp</a>
+          <a href="#" id="wpp-link" class="btn-wpp" target="_blank" rel="noopener noreferrer"><i class="fab fa-whatsapp"></i> Abrir WhatsApp</a>
         </div>
       </div>
     </div>
@@ -450,7 +458,10 @@
       <div class="service-content">
         <h3>Portabilidade de Consignado</h3>
         <p>Migre seu contrato para uma instituição com taxas menores e ainda receba troco em dinheiro.</p>
-        <a href="https://wa.me/5524988181891?text=Ol%C3%A1%21%20Sou%20aposentado%20e%20quero%20fazer%20portabilidade%20do%20meu%20consignado." class="service-arrow" target="_blank"><i class="fas fa-arrow-right"></i></a>
+        <div class="service-actions">
+          <a href="https://wa.me/5524988181891?text=Ol%C3%A1%21%20Sou%20aposentado%20e%20quero%20fazer%20portabilidade%20do%20meu%20consignado." class="btn-contrate" target="_blank" rel="noopener noreferrer"><i class="fab fa-whatsapp"></i> Contrate Agora</a>
+          <a href="https://wa.me/5524988181891?text=Ol%C3%A1%21%20Sou%20aposentado%20e%20quero%20fazer%20portabilidade%20do%20meu%20consignado." class="service-arrow" target="_blank" rel="noopener noreferrer"><i class="fas fa-arrow-right"></i></a>
+        </div>
       </div>
     </div>
     <div class="service-card">
@@ -460,7 +471,10 @@
       <div class="service-content">
         <h3>Empréstimo Novo INSS</h3>
         <p>Crédito descontado direto no benefício, com análise rápida e até 96 parcelas.</p>
-        <a href="https://wa.me/5524988181891?text=Ol%C3%A1%21%20Sou%20aposentado%20e%20quero%20simular%20um%20empr%C3%A9stimo%20novo%20INSS." class="service-arrow" target="_blank"><i class="fas fa-arrow-right"></i></a>
+        <div class="service-actions">
+          <a href="https://wa.me/5524988181891?text=Ol%C3%A1%21%20Sou%20aposentado%20e%20quero%20simular%20um%20empr%C3%A9stimo%20novo%20INSS." class="btn-contrate" target="_blank" rel="noopener noreferrer"><i class="fab fa-whatsapp"></i> Contrate Agora</a>
+          <a href="https://wa.me/5524988181891?text=Ol%C3%A1%21%20Sou%20aposentado%20e%20quero%20simular%20um%20empr%C3%A9stimo%20novo%20INSS." class="service-arrow" target="_blank" rel="noopener noreferrer"><i class="fas fa-arrow-right"></i></a>
+        </div>
       </div>
     </div>
     <div class="service-card">
@@ -470,7 +484,10 @@
       <div class="service-content">
         <h3>Refinanciamento</h3>
         <p>Reorganize prazos e parcelas para ganhar fôlego no orçamento e receber dinheiro extra.</p>
-        <a href="https://wa.me/5524988181891?text=Ol%C3%A1%21%20Sou%20aposentado%20e%20quero%20refinanciar%20meu%20contrato%20consignado." class="service-arrow" target="_blank"><i class="fas fa-arrow-right"></i></a>
+        <div class="service-actions">
+          <a href="https://wa.me/5524988181891?text=Ol%C3%A1%21%20Sou%20aposentado%20e%20quero%20refinanciar%20meu%20contrato%20consignado." class="btn-contrate" target="_blank" rel="noopener noreferrer"><i class="fab fa-whatsapp"></i> Contrate Agora</a>
+          <a href="https://wa.me/5524988181891?text=Ol%C3%A1%21%20Sou%20aposentado%20e%20quero%20refinanciar%20meu%20contrato%20consignado." class="service-arrow" target="_blank" rel="noopener noreferrer"><i class="fas fa-arrow-right"></i></a>
+        </div>
       </div>
     </div>
     <div class="service-card">
@@ -480,7 +497,10 @@
       <div class="service-content">
         <h3>Consignado CLT</h3>
         <p>Crédito para trabalhadores com carteira assinada — desconto em folha, sem consulta ao SPC/Serasa.</p>
-        <a href="https://wa.me/5524988181891?text=Ol%C3%A1%21%20Sou%20trabalhador%20CLT%20e%20quero%20simular%20um%20empr%C3%A9stimo%20consignado." class="service-arrow" target="_blank"><i class="fas fa-arrow-right"></i></a>
+        <div class="service-actions">
+          <a href="https://wa.me/5524988181891?text=Ol%C3%A1%21%20Sou%20trabalhador%20CLT%20e%20quero%20simular%20um%20empr%C3%A9stimo%20consignado." class="btn-contrate" target="_blank" rel="noopener noreferrer"><i class="fab fa-whatsapp"></i> Contrate Agora</a>
+          <a href="https://wa.me/5524988181891?text=Ol%C3%A1%21%20Sou%20trabalhador%20CLT%20e%20quero%20simular%20um%20empr%C3%A9stimo%20consignado." class="service-arrow" target="_blank" rel="noopener noreferrer"><i class="fas fa-arrow-right"></i></a>
+        </div>
       </div>
     </div>
     <div class="service-card">
@@ -490,7 +510,10 @@
       <div class="service-content">
         <h3>Antecipação FGTS</h3>
         <p>Antecipe o Saque-Aniversário com segurança e receba o valor em poucas horas na sua conta.</p>
-        <a href="https://wa.me/5524988181891?text=Ol%C3%A1%21%20Quero%20antecipar%20meu%20FGTS%20saque-anivers%C3%A1rio." class="service-arrow" target="_blank"><i class="fas fa-arrow-right"></i></a>
+        <div class="service-actions">
+          <a href="https://wa.me/5524988181891?text=Ol%C3%A1%21%20Quero%20antecipar%20meu%20FGTS%20saque-anivers%C3%A1rio." class="btn-contrate" target="_blank" rel="noopener noreferrer"><i class="fab fa-whatsapp"></i> Contrate Agora</a>
+          <a href="https://wa.me/5524988181891?text=Ol%C3%A1%21%20Quero%20antecipar%20meu%20FGTS%20saque-anivers%C3%A1rio." class="service-arrow" target="_blank" rel="noopener noreferrer"><i class="fas fa-arrow-right"></i></a>
+        </div>
       </div>
     </div>
     <div class="service-card">
@@ -500,7 +523,10 @@
       <div class="service-content">
         <h3>Cartão Benefício</h3>
         <p>Mais liberdade para aposentados e servidores, com limite em folha e sem anuidade.</p>
-        <a href="https://wa.me/5524988181891?text=Ol%C3%A1%21%20Sou%20aposentado%20e%20quero%20saber%20sobre%20cart%C3%A3o%20benef%C3%ADcio%20consignado." class="service-arrow" target="_blank"><i class="fas fa-arrow-right"></i></a>
+        <div class="service-actions">
+          <a href="https://wa.me/5524988181891?text=Ol%C3%A1%21%20Sou%20aposentado%20e%20quero%20saber%20sobre%20cart%C3%A3o%20benef%C3%ADcio%20consignado." class="btn-contrate" target="_blank" rel="noopener noreferrer"><i class="fab fa-whatsapp"></i> Contrate Agora</a>
+          <a href="https://wa.me/5524988181891?text=Ol%C3%A1%21%20Sou%20aposentado%20e%20quero%20saber%20sobre%20cart%C3%A3o%20benef%C3%ADcio%20consignado." class="service-arrow" target="_blank" rel="noopener noreferrer"><i class="fas fa-arrow-right"></i></a>
+        </div>
       </div>
     </div>
     <div class="service-card" style="background: var(--navy-dark); position: relative; overflow: hidden;">
@@ -521,6 +547,17 @@
     <div class="numero-item"><strong>96x</strong><span>Maior prazo disponível</span></div>
     <div class="numero-item"><strong>24h</strong><span>Aprovação média</span></div>
     <div class="numero-item"><strong>1,49%</strong><span>Taxa a partir de (a.m.)</span></div>
+  </div>
+</section>
+
+<!-- CTA FAIXA 1 -->
+<section style="background: var(--orange); padding: 48px 5%; text-align: center;">
+  <h2 style="color:white; font-size: clamp(1.4rem,2.5vw,2rem); font-weight:800; margin-bottom:12px;">Quanto você pode receber hoje?</h2>
+  <p style="color:rgba(255,255,255,0.9); margin-bottom:28px; font-size:1rem;">Aposentados, pensionistas e trabalhadores CLT — descubra agora em segundos</p>
+  <div style="display:flex; gap:14px; justify-content:center; flex-wrap:wrap;">
+    <a href="https://wa.me/5524988181891?text=Ol%C3%A1%21%20Sou%20aposentado%20e%20quero%20simular%20um%20empr%C3%A9stimo%20INSS." target="_blank" rel="noopener noreferrer" style="background:white; color:var(--orange); padding:14px 28px; border-radius:50px; font-weight:800; text-decoration:none; font-size:15px; display:inline-flex; align-items:center; gap:8px;"><i class="fab fa-whatsapp"></i> Simular INSS</a>
+    <a href="https://wa.me/5524988181891?text=Ol%C3%A1%21%20Sou%20trabalhador%20CLT%20e%20quero%20simular%20consignado." target="_blank" rel="noopener noreferrer" style="background:transparent; color:white; padding:14px 28px; border-radius:50px; font-weight:800; text-decoration:none; font-size:15px; border:2px solid white; display:inline-flex; align-items:center; gap:8px;"><i class="fab fa-whatsapp"></i> Simular CLT</a>
+    <a href="https://wa.me/5524988181891?text=Ol%C3%A1%21%20Quero%20antecipar%20meu%20FGTS%20saque-anivers%C3%A1rio." target="_blank" rel="noopener noreferrer" style="background:transparent; color:white; padding:14px 28px; border-radius:50px; font-weight:800; text-decoration:none; font-size:15px; border:2px solid white; display:inline-flex; align-items:center; gap:8px;"><i class="fab fa-whatsapp"></i> Antecipar FGTS</a>
   </div>
 </section>
 
@@ -574,6 +611,20 @@
   </div>
 </section>
 
+<!-- CTA FAIXA 2 -->
+<section style="background: var(--navy-dark); padding: 56px 5%; text-align: center;">
+  <p style="color:var(--teal); font-size:13px; font-weight:700; letter-spacing:2px; text-transform:uppercase; margin-bottom:12px;">Não perca tempo</p>
+  <h2 style="color:white; font-size: clamp(1.6rem,3vw,2.4rem); font-weight:900; margin-bottom:14px;">Pronto para contratar?<br/>Nossa equipe atende <span style="color:var(--orange)">agora mesmo</span></h2>
+  <p style="color:rgba(255,255,255,0.65); max-width:500px; margin:0 auto 36px; font-size:1rem; line-height:1.7;">Clique no serviço desejado e fale direto com um especialista pelo WhatsApp — sem filas, sem espera.</p>
+  <div style="display:flex; gap:14px; justify-content:center; flex-wrap:wrap; max-width:700px; margin:0 auto;">
+    <a href="https://wa.me/5524988181891?text=Ol%C3%A1%21%20Quero%20contratar%20portabilidade%20consignado." target="_blank" rel="noopener noreferrer" style="background:var(--orange); color:white; padding:13px 22px; border-radius:50px; font-weight:800; text-decoration:none; font-size:14px; display:inline-flex; align-items:center; gap:7px;"><i class="fab fa-whatsapp"></i> Portabilidade</a>
+    <a href="https://wa.me/5524988181891?text=Ol%C3%A1%21%20Sou%20aposentado%20e%20quero%20contratar%20empr%C3%A9stimo%20novo%20INSS." target="_blank" rel="noopener noreferrer" style="background:var(--orange); color:white; padding:13px 22px; border-radius:50px; font-weight:800; text-decoration:none; font-size:14px; display:inline-flex; align-items:center; gap:7px;"><i class="fab fa-whatsapp"></i> Empréstimo Novo</a>
+    <a href="https://wa.me/5524988181891?text=Ol%C3%A1%21%20Sou%20trabalhador%20CLT%20e%20quero%20contratar%20consignado." target="_blank" rel="noopener noreferrer" style="background:var(--orange); color:white; padding:13px 22px; border-radius:50px; font-weight:800; text-decoration:none; font-size:14px; display:inline-flex; align-items:center; gap:7px;"><i class="fab fa-whatsapp"></i> Consignado CLT</a>
+    <a href="https://wa.me/5524988181891?text=Ol%C3%A1%21%20Quero%20contratar%20antecipa%C3%A7%C3%A3o%20do%20meu%20FGTS." target="_blank" rel="noopener noreferrer" style="background:var(--orange); color:white; padding:13px 22px; border-radius:50px; font-weight:800; text-decoration:none; font-size:14px; display:inline-flex; align-items:center; gap:7px;"><i class="fab fa-whatsapp"></i> Antecipação FGTS</a>
+    <a href="https://wa.me/5524988181891?text=Ol%C3%A1%21%20Sou%20aposentado%20e%20quero%20refinanciar%20meu%20contrato." target="_blank" rel="noopener noreferrer" style="background:transparent; color:white; padding:13px 22px; border-radius:50px; font-weight:800; text-decoration:none; font-size:14px; border:2px solid rgba(255,255,255,0.3); display:inline-flex; align-items:center; gap:7px;"><i class="fab fa-whatsapp"></i> Refinanciamento</a>
+  </div>
+</section>
+
 <!-- PARCEIROS -->
 <section id="parceiros">
   <div class="section-header">
@@ -600,7 +651,7 @@
       <h2>Atendimento rápido e fácil é aqui!</h2>
       <p>Preencha o formulário ao lado ou nos chame diretamente no WhatsApp. Nossa equipe está pronta para atender você.</p>
       <div class="contato-item"><i class="fas fa-phone"></i><span>(24) 98818-1891</span></div>
-      <div class="contato-item"><i class="fab fa-whatsapp"></i><a href="https://wa.me/5524988181891?text=Ol%C3%A1%21%20Quero%20simular%20um%20empr%C3%A9stimo%20consignado." target="_blank">(24) 98818-1891 (WhatsApp)</a></div>
+      <div class="contato-item"><i class="fab fa-whatsapp"></i><a href="https://wa.me/5524988181891?text=Ol%C3%A1%21%20Quero%20simular%20um%20empr%C3%A9stimo%20consignado." target="_blank" rel="noopener noreferrer">(24) 98818-1891 (WhatsApp)</a></div>
       <div class="contato-item"><i class="fas fa-envelope"></i><a href="mailto:sacmpromotora@gmail.com">sacmpromotora@gmail.com</a></div>
       <div class="contato-item"><i class="fas fa-map-marker-alt"></i><span>Av. Amaral Peixoto, 228 — Centro, Volta Redonda/RJ — CEP 27253-220</span></div>
     </div>
@@ -633,7 +684,7 @@
     <div class="footer-brand">
       <img src="logo.jpg" alt="M Promotora" />
       <p>Correspondente bancário certificado pela Febraban. Atuamos com transparência, agilidade e as melhores taxas do mercado para aposentados, pensionistas e trabalhadores CLT.</p>
-      <a href="https://wa.me/5524988181891?text=Ol%C3%A1%21%20Quero%20simular%20um%20empr%C3%A9stimo%20consignado." class="footer-wpp" target="_blank"><i class="fab fa-whatsapp"></i> Fale no WhatsApp</a>
+      <a href="https://wa.me/5524988181891?text=Ol%C3%A1%21%20Quero%20simular%20um%20empr%C3%A9stimo%20consignado." class="footer-wpp" target="_blank" rel="noopener noreferrer"><i class="fab fa-whatsapp"></i> Fale no WhatsApp</a>
     </div>
     <div class="footer-col">
       <h4>Produtos</h4>
@@ -666,10 +717,16 @@
 </footer>
 
 <!-- WhatsApp Float -->
-<a href="https://wa.me/5524988181891?text=Ol%C3%A1%21%20Quero%20simular%20um%20empr%C3%A9stimo%20consignado." class="wpp-float" target="_blank">
+<a href="https://wa.me/5524988181891?text=Ol%C3%A1%21%20Quero%20simular%20um%20empr%C3%A9stimo%20consignado." class="wpp-float" target="_blank" rel="noopener noreferrer">
   <div class="wpp-pulse"></div>
   <i class="fab fa-whatsapp"></i>
 </a>
+
+<!-- Mobile Sticky CTA bar -->
+<div id="mobile-cta" style="display:none; position:fixed; bottom:0; left:0; right:0; z-index:998; background:var(--navy-dark); padding:10px 16px; border-top:2px solid var(--orange); gap:8px; justify-content:center;">
+  <a href="https://wa.me/5524988181891?text=Ol%C3%A1%21%20Sou%20aposentado%20e%20quero%20simular%20empr%C3%A9stimo%20INSS." target="_blank" rel="noopener noreferrer" style="flex:1; background:var(--orange); color:white; padding:12px 8px; border-radius:10px; font-weight:800; text-decoration:none; font-size:13px; text-align:center; display:flex; align-items:center; justify-content:center; gap:5px;"><i class="fab fa-whatsapp"></i> Contratar INSS</a>
+  <a href="https://wa.me/5524988181891?text=Ol%C3%A1%21%20Quero%20contratar%20portabilidade%20consignado." target="_blank" rel="noopener noreferrer" style="flex:1; background:var(--teal); color:white; padding:12px 8px; border-radius:10px; font-weight:800; text-decoration:none; font-size:13px; text-align:center; display:flex; align-items:center; justify-content:center; gap:5px;"><i class="fab fa-whatsapp"></i> Portabilidade</a>
+</div>
 
 <!-- Simular Float -->
 <a href="#simule" class="simular-btn">
@@ -748,10 +805,10 @@
       const wppUrl = `https://wa.me/5524988181891?text=${encodeURIComponent(msg)}`;
       document.getElementById('wpp-link').href = wppUrl;
       document.getElementById('res-nome').textContent = primeiroNome;
-      document.getElementById('res-tel').textContent = simData.tel;
 
-      // Abre WhatsApp direto
-      window.open(wppUrl, '_blank');
+      // Redireciona direto (evita bloqueio de popup)
+      window.location.href = wppUrl;
+      return;
     }
     setSimStep(step + 1);
   }
@@ -772,7 +829,7 @@
     const tel = document.getElementById('ct-tel').value.trim();
     const servico = document.getElementById('ct-servico').value;
     const msg = `Olá! Vim pelo site e gostaria de mais informações.\n\nNome: ${nome || 'Não informado'}\nTelefone: ${tel || 'Não informado'}\nServiço: ${servico || 'Não informado'}`;
-    window.open(`https://wa.me/5524988181891?text=${encodeURIComponent(msg)}`, '_blank');
+    window.location.href = `https://wa.me/5524988181891?text=${encodeURIComponent(msg)}`;
   }
 
   // Animação counters
@@ -784,6 +841,20 @@
     counters.forEach(c => obs.observe(c));
   };
   observeCounters();
+
+  // Mobile sticky CTA bar
+  const mobileCta = document.getElementById('mobile-cta');
+  function checkMobileCta() {
+    if (window.innerWidth <= 768) {
+      mobileCta.style.display = 'flex';
+      document.body.style.paddingBottom = '72px';
+    } else {
+      mobileCta.style.display = 'none';
+      document.body.style.paddingBottom = '';
+    }
+  }
+  checkMobileCta();
+  window.addEventListener('resize', checkMobileCta);
 </script>
 </body>
 </html>
