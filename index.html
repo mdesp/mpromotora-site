@@ -1,0 +1,762 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>M Promotora de Crédito — Crédito Rápido e Sem Burocracia</title>
+  <meta name="description" content="Crédito consignado para aposentados, pensionistas e trabalhadores CLT. Portabilidade, empréstimo novo, FGTS e muito mais. Atendimento rápido pelo WhatsApp." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+  <style>
+    :root {
+      --navy: #1a2f5a;
+      --navy-dark: #0f1e3d;
+      --navy-light: #2a4080;
+      --orange: #e07b2a;
+      --orange-dark: #c4671e;
+      --teal: #0ea5d9;
+      --teal-dark: #0284a8;
+      --white: #ffffff;
+      --gray-light: #f4f6fb;
+      --gray: #64748b;
+    }
+    * { margin: 0; padding: 0; box-sizing: border-box; scroll-behavior: smooth; }
+    body { font-family: 'Inter', sans-serif; color: #1e293b; overflow-x: hidden; }
+
+    /* ── NAV ── */
+    nav {
+      position: fixed; top: 0; left: 0; right: 0; z-index: 1000;
+      background: var(--navy-dark);
+      display: flex; align-items: center; justify-content: space-between;
+      padding: 0 5%; height: 70px;
+      box-shadow: 0 2px 20px rgba(0,0,0,0.3);
+    }
+    .nav-logo { display: flex; align-items: center; gap: 10px; }
+    .nav-logo img { height: 48px; border-radius: 8px; }
+    .nav-links { display: flex; gap: 30px; list-style: none; }
+    .nav-links a { color: rgba(255,255,255,0.85); text-decoration: none; font-size: 13px; font-weight: 600; letter-spacing: 0.5px; text-transform: uppercase; transition: color 0.2s; }
+    .nav-links a:hover { color: var(--orange); }
+    .nav-cta { background: var(--orange); color: white; border: none; padding: 10px 22px; border-radius: 25px; font-size: 13px; font-weight: 700; cursor: pointer; text-decoration: none; transition: background 0.2s; }
+    .nav-cta:hover { background: var(--orange-dark); }
+    .hamburger { display: none; flex-direction: column; gap: 5px; cursor: pointer; }
+    .hamburger span { width: 25px; height: 2px; background: white; border-radius: 2px; transition: 0.3s; }
+
+    /* ── HERO ── */
+    #inicio {
+      height: 100vh; min-height: 600px;
+      background: linear-gradient(135deg, rgba(15,30,61,0.92) 0%, rgba(26,47,90,0.85) 60%, rgba(14,165,217,0.4) 100%),
+        url('https://images.unsplash.com/photo-1573497019940-1c28c88b4f3e?w=1600&q=80') center/cover no-repeat;
+      display: flex; align-items: center;
+      padding: 0 5%; position: relative;
+    }
+    .hero-content { max-width: 680px; }
+    .hero-badge {
+      display: inline-flex; align-items: center; gap: 8px;
+      background: rgba(255,255,255,0.1); border: 1px solid rgba(255,255,255,0.2);
+      color: white; padding: 6px 16px; border-radius: 20px; font-size: 13px; font-weight: 600;
+      margin-bottom: 24px; backdrop-filter: blur(4px);
+    }
+    .hero-badge i { color: var(--orange); }
+    .hero-content h1 {
+      font-size: clamp(2.5rem, 5vw, 4rem); font-weight: 900; color: white; line-height: 1.1;
+      margin-bottom: 20px;
+    }
+    .hero-content h1 span { color: var(--orange); }
+    .hero-content p { font-size: 1.15rem; color: rgba(255,255,255,0.8); margin-bottom: 36px; line-height: 1.7; max-width: 500px; }
+    .hero-btns { display: flex; gap: 14px; flex-wrap: wrap; }
+    .btn-primary {
+      background: var(--orange); color: white; padding: 15px 32px; border-radius: 50px;
+      font-size: 15px; font-weight: 700; text-decoration: none; display: inline-flex;
+      align-items: center; gap: 10px; transition: all 0.2s; box-shadow: 0 4px 20px rgba(224,123,42,0.5);
+    }
+    .btn-primary:hover { background: var(--orange-dark); transform: translateY(-2px); }
+    .btn-secondary {
+      background: transparent; color: white; padding: 15px 32px; border-radius: 50px;
+      font-size: 15px; font-weight: 700; text-decoration: none; display: inline-flex;
+      align-items: center; gap: 10px; border: 2px solid rgba(255,255,255,0.4); transition: all 0.2s;
+    }
+    .btn-secondary:hover { border-color: white; background: rgba(255,255,255,0.1); }
+    .hero-stats {
+      position: absolute; bottom: 40px; right: 5%;
+      display: flex; gap: 20px;
+    }
+    .stat-card {
+      background: rgba(255,255,255,0.08); backdrop-filter: blur(10px);
+      border: 1px solid rgba(255,255,255,0.15);
+      padding: 16px 24px; border-radius: 16px; text-align: center; color: white;
+    }
+    .stat-card strong { display: block; font-size: 1.6rem; font-weight: 800; color: var(--orange); }
+    .stat-card span { font-size: 12px; opacity: 0.8; }
+    .simular-btn {
+      position: fixed; bottom: 90px; right: 20px; z-index: 999;
+      background: var(--navy-dark); color: white;
+      padding: 12px 20px; border-radius: 12px; font-size: 13px; font-weight: 700;
+      text-decoration: none; display: flex; flex-direction: column; align-items: center; gap: 4px;
+      box-shadow: 0 4px 20px rgba(0,0,0,0.3); transition: transform 0.2s;
+    }
+    .simular-btn:hover { transform: translateY(-2px); }
+    .simular-btn i { font-size: 1.2rem; color: var(--teal); }
+
+    /* ── SECTION COMUM ── */
+    section { padding: 80px 5%; }
+    .section-header { text-align: center; margin-bottom: 56px; }
+    .section-label { color: var(--orange); font-size: 13px; font-weight: 700; letter-spacing: 2px; text-transform: uppercase; margin-bottom: 10px; }
+    .section-header h2 { font-size: clamp(1.8rem, 3vw, 2.6rem); font-weight: 800; color: var(--navy-dark); }
+    .section-header p { color: var(--gray); margin-top: 14px; font-size: 1rem; max-width: 600px; margin-left: auto; margin-right: auto; line-height: 1.7; }
+
+    /* ── SIMULADOR ── */
+    #simule { background: var(--gray-light); }
+    .sim-wrapper {
+      max-width: 700px; margin: 0 auto;
+      background: white; border-radius: 24px; overflow: hidden;
+      box-shadow: 0 20px 60px rgba(0,0,0,0.1);
+    }
+    .sim-header { background: var(--navy-dark); padding: 32px; text-align: center; }
+    .sim-header h3 { color: white; font-size: 1.5rem; font-weight: 800; }
+    .sim-header p { color: rgba(255,255,255,0.7); font-size: 14px; margin-top: 6px; }
+    .sim-steps { display: flex; justify-content: center; gap: 0; padding: 24px 32px 0; }
+    .sim-step {
+      display: flex; flex-direction: column; align-items: center; gap: 6px;
+      flex: 1; position: relative;
+    }
+    .sim-step:not(:last-child)::after {
+      content: ''; position: absolute; top: 18px; left: 60%; width: 80%; height: 2px;
+      background: #e2e8f0; z-index: 0;
+    }
+    .sim-step.active::after { background: var(--teal); }
+    .step-circle {
+      width: 36px; height: 36px; border-radius: 50%;
+      background: #e2e8f0; color: #94a3b8;
+      display: flex; align-items: center; justify-content: center;
+      font-size: 14px; font-weight: 700; position: relative; z-index: 1; transition: all 0.3s;
+    }
+    .sim-step.active .step-circle { background: var(--teal); color: white; }
+    .sim-step.done .step-circle { background: var(--orange); color: white; }
+    .step-label { font-size: 11px; font-weight: 600; color: #94a3b8; }
+    .sim-step.active .step-label { color: var(--teal); }
+    .sim-body { padding: 32px; }
+    .sim-page { display: none; }
+    .sim-page.active { display: block; }
+    .form-group { margin-bottom: 20px; }
+    .form-group label { display: block; font-size: 13px; font-weight: 600; color: var(--navy); margin-bottom: 8px; }
+    .form-group input, .form-group select {
+      width: 100%; padding: 14px 16px; border: 1.5px solid #e2e8f0; border-radius: 12px;
+      font-size: 15px; font-family: 'Inter', sans-serif; transition: border 0.2s; outline: none;
+    }
+    .form-group input:focus, .form-group select:focus { border-color: var(--teal); }
+    .sim-nav { display: flex; justify-content: space-between; margin-top: 24px; gap: 12px; }
+    .btn-sim-next {
+      flex: 1; background: var(--teal); color: white; border: none; padding: 14px;
+      border-radius: 12px; font-size: 15px; font-weight: 700; cursor: pointer; transition: background 0.2s;
+    }
+    .btn-sim-next:hover { background: var(--teal-dark); }
+    .btn-sim-back {
+      background: var(--gray-light); color: var(--navy); border: none; padding: 14px 20px;
+      border-radius: 12px; font-size: 14px; font-weight: 600; cursor: pointer;
+    }
+    .resultado-box { text-align: center; padding: 20px 0; }
+    .resultado-box i { font-size: 3rem; color: var(--teal); margin-bottom: 16px; }
+    .resultado-box h4 { font-size: 1.4rem; font-weight: 800; color: var(--navy-dark); margin-bottom: 8px; }
+    .resultado-box p { color: var(--gray); margin-bottom: 24px; line-height: 1.6; }
+    .btn-wpp {
+      display: inline-flex; align-items: center; gap: 10px;
+      background: #25D366; color: white; padding: 15px 32px;
+      border-radius: 50px; font-size: 15px; font-weight: 700;
+      text-decoration: none; box-shadow: 0 4px 15px rgba(37,211,102,0.4);
+    }
+
+    /* ── SERVIÇOS ── */
+    #servicos { background: white; }
+    .services-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(260px, 1fr)); gap: 24px; }
+    .service-card {
+      border-radius: 20px; overflow: hidden; position: relative;
+      cursor: pointer; transition: transform 0.3s, box-shadow 0.3s;
+      box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+      min-height: 320px;
+    }
+    .service-card:hover { transform: translateY(-6px); box-shadow: 0 12px 40px rgba(0,0,0,0.15); }
+    .service-card img { width: 100%; height: 100%; object-fit: cover; position: absolute; inset: 0; }
+    .service-card-overlay {
+      position: absolute; inset: 0;
+      background: linear-gradient(to top, rgba(10,20,50,0.9) 40%, rgba(10,20,50,0.1) 100%);
+    }
+    .service-badge {
+      position: absolute; top: 16px; left: 16px;
+      background: var(--teal); color: white;
+      padding: 5px 14px; border-radius: 20px; font-size: 12px; font-weight: 700;
+    }
+    .service-content {
+      position: absolute; bottom: 0; left: 0; right: 0; padding: 24px;
+    }
+    .service-content h3 { color: white; font-size: 1.2rem; font-weight: 800; margin-bottom: 8px; }
+    .service-content p { color: rgba(255,255,255,0.8); font-size: 13px; line-height: 1.5; margin-bottom: 16px; }
+    .service-arrow {
+      width: 36px; height: 36px; background: var(--teal); border-radius: 50%;
+      display: flex; align-items: center; justify-content: center; color: white;
+      text-decoration: none; font-size: 14px; transition: background 0.2s;
+    }
+    .service-arrow:hover { background: var(--orange); }
+    .why-box {
+      background: var(--navy-dark); border-radius: 20px; padding: 32px; color: white;
+      min-height: 320px; display: flex; flex-direction: column; justify-content: center;
+    }
+    .why-box h3 { font-size: 1.4rem; font-weight: 800; margin-bottom: 12px; }
+    .why-box p { color: rgba(255,255,255,0.75); font-size: 14px; line-height: 1.7; }
+
+    /* ── NÚMEROS ── */
+    #numeros { background: var(--navy-dark); }
+    .numeros-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 32px; text-align: center; }
+    .numero-item strong { display: block; font-size: clamp(2.5rem, 5vw, 4rem); font-weight: 900; color: var(--orange); }
+    .numero-item span { color: rgba(255,255,255,0.7); font-size: 14px; margin-top: 6px; display: block; }
+
+    /* ── DEPOIMENTOS ── */
+    #depoimentos { background: var(--gray-light); }
+    .reviews-header { display: flex; align-items: center; gap: 40px; margin-bottom: 40px; flex-wrap: wrap; }
+    .reviews-score { text-align: center; }
+    .reviews-score .score-label { font-size: 13px; font-weight: 700; letter-spacing: 1px; color: var(--navy-dark); margin-bottom: 4px; }
+    .stars { color: #facc15; font-size: 1.6rem; margin-bottom: 4px; }
+    .reviews-score p { font-size: 12px; color: var(--gray); }
+    .reviews-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: 20px; }
+    .review-card {
+      background: white; border-radius: 16px; padding: 24px;
+      box-shadow: 0 2px 12px rgba(0,0,0,0.06); transition: box-shadow 0.2s;
+    }
+    .review-card:hover { box-shadow: 0 6px 24px rgba(0,0,0,0.1); }
+    .review-top { display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 12px; }
+    .reviewer { display: flex; align-items: center; gap: 10px; }
+    .reviewer-avatar {
+      width: 40px; height: 40px; border-radius: 50%;
+      background: var(--navy); color: white;
+      display: flex; align-items: center; justify-content: center; font-weight: 700; font-size: 14px;
+    }
+    .reviewer-name { font-size: 14px; font-weight: 700; color: var(--navy-dark); }
+    .reviewer-date { font-size: 12px; color: var(--gray); }
+    .review-stars { color: #facc15; font-size: 13px; }
+    .review-text { font-size: 14px; color: #475569; line-height: 1.6; }
+
+    /* ── CTA CONTATO ── */
+    #contato { background: linear-gradient(135deg, var(--teal) 0%, var(--teal-dark) 100%); }
+    .contato-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 60px; align-items: center; }
+    .contato-info h2 { color: white; font-size: clamp(1.8rem, 3vw, 2.4rem); font-weight: 800; margin-bottom: 16px; }
+    .contato-info p { color: rgba(255,255,255,0.85); font-size: 1rem; line-height: 1.7; margin-bottom: 32px; }
+    .contato-item { display: flex; align-items: center; gap: 12px; margin-bottom: 16px; color: white; }
+    .contato-item i { width: 36px; height: 36px; background: rgba(255,255,255,0.15); border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 14px; }
+    .contato-item a { color: white; text-decoration: none; font-weight: 600; }
+    .contato-form { background: white; border-radius: 24px; padding: 36px; box-shadow: 0 20px 60px rgba(0,0,0,0.15); }
+    .form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+    .contato-form input, .contato-form select {
+      width: 100%; padding: 13px 16px; border: 1.5px solid #e2e8f0; border-radius: 10px;
+      font-size: 14px; font-family: 'Inter', sans-serif; outline: none; transition: border 0.2s;
+      margin-bottom: 14px;
+    }
+    .contato-form input:focus, .contato-form select:focus { border-color: var(--teal); }
+    .contato-form button {
+      width: 100%; background: var(--teal); color: white; border: none;
+      padding: 15px; border-radius: 10px; font-size: 15px; font-weight: 700;
+      cursor: pointer; transition: background 0.2s;
+    }
+    .contato-form button:hover { background: var(--teal-dark); }
+
+    /* ── PARCEIROS ── */
+    #parceiros { background: white; }
+    .parceiros-logos { display: flex; flex-wrap: wrap; gap: 20px; justify-content: center; align-items: center; }
+    .parceiro-logo {
+      background: var(--gray-light); border-radius: 16px; padding: 20px 36px;
+      font-size: 18px; font-weight: 800; color: var(--navy); letter-spacing: -0.5px;
+      transition: all 0.2s; border: 1.5px solid transparent;
+    }
+    .parceiro-logo:hover { border-color: var(--teal); color: var(--teal); }
+
+    /* ── FOOTER ── */
+    footer { background: var(--navy-dark); color: white; padding: 60px 5% 30px; }
+    .footer-grid { display: grid; grid-template-columns: 2fr 1fr 1fr; gap: 48px; margin-bottom: 48px; }
+    .footer-brand img { height: 52px; border-radius: 8px; margin-bottom: 20px; }
+    .footer-brand p { color: rgba(255,255,255,0.6); font-size: 14px; line-height: 1.7; margin-bottom: 20px; }
+    .footer-wpp {
+      display: inline-flex; align-items: center; gap: 8px;
+      background: #25D366; color: white; padding: 10px 20px;
+      border-radius: 25px; text-decoration: none; font-size: 14px; font-weight: 700;
+    }
+    .footer-col h4 { font-size: 14px; font-weight: 700; margin-bottom: 20px; color: rgba(255,255,255,0.9); }
+    .footer-col ul { list-style: none; }
+    .footer-col ul li { margin-bottom: 10px; }
+    .footer-col ul li a { color: rgba(255,255,255,0.55); text-decoration: none; font-size: 14px; transition: color 0.2s; }
+    .footer-col ul li a:hover { color: var(--orange); }
+    .footer-contact-item { display: flex; align-items: flex-start; gap: 10px; margin-bottom: 12px; color: rgba(255,255,255,0.6); font-size: 14px; }
+    .footer-contact-item i { color: var(--teal); margin-top: 2px; min-width: 16px; }
+    .footer-bottom { border-top: 1px solid rgba(255,255,255,0.1); padding-top: 28px; }
+    .footer-legal { font-size: 11px; color: rgba(255,255,255,0.35); line-height: 1.6; margin-bottom: 20px; }
+    .footer-copy { font-size: 12px; color: rgba(255,255,255,0.4); text-align: center; }
+
+    /* ── WHATSAPP FLOAT ── */
+    .wpp-float {
+      position: fixed; bottom: 24px; right: 24px; z-index: 999;
+      width: 58px; height: 58px; background: #25D366; border-radius: 50%;
+      display: flex; align-items: center; justify-content: center;
+      box-shadow: 0 4px 20px rgba(37,211,102,0.5); transition: transform 0.2s;
+      text-decoration: none;
+    }
+    .wpp-float:hover { transform: scale(1.1); }
+    .wpp-float i { font-size: 1.6rem; color: white; }
+    .wpp-pulse {
+      position: absolute; inset: -4px; border-radius: 50%;
+      background: rgba(37,211,102,0.3); animation: pulse 2s infinite;
+    }
+    @keyframes pulse { 0%,100%{transform:scale(1);opacity:0.8} 50%{transform:scale(1.2);opacity:0} }
+
+    /* ── RESPONSIVE ── */
+    @media (max-width: 768px) {
+      .nav-links, .nav-cta { display: none; }
+      .hamburger { display: flex; }
+      nav.open .nav-links {
+        display: flex; flex-direction: column; position: absolute;
+        top: 70px; left: 0; right: 0; background: var(--navy-dark);
+        padding: 20px 5%; gap: 16px;
+      }
+      .hero-stats { display: none; }
+      .contato-grid { grid-template-columns: 1fr; }
+      .footer-grid { grid-template-columns: 1fr; }
+      .form-row { grid-template-columns: 1fr; }
+      .services-grid { grid-template-columns: 1fr 1fr; }
+    }
+    @media (max-width: 480px) {
+      .services-grid { grid-template-columns: 1fr; }
+    }
+  </style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav id="navbar">
+  <div class="nav-logo">
+    <img src="logo.jpg" alt="M Promotora de Crédito" />
+  </div>
+  <ul class="nav-links" id="navLinks">
+    <li><a href="#inicio">Início</a></li>
+    <li><a href="#simule">Simule</a></li>
+    <li><a href="#servicos">Serviços</a></li>
+    <li><a href="#parceiros">Parceiros</a></li>
+    <li><a href="#depoimentos">Avaliações</a></li>
+    <li><a href="#contato">Contato</a></li>
+  </ul>
+  <a href="#simule" class="nav-cta">Simular Agora</a>
+  <div class="hamburger" onclick="toggleNav()">
+    <span></span><span></span><span></span>
+  </div>
+</nav>
+
+<!-- HERO -->
+<section id="inicio">
+  <div class="hero-content">
+    <div class="hero-badge"><i class="fas fa-shield-check"></i> Correspondente Bancário Certificado</div>
+    <h1>Crédito rápido e<br /><span>sem burocracia</span></h1>
+    <p>Aposentados, pensionistas e trabalhadores CLT: realize seus sonhos com as melhores taxas do mercado e aprovação na hora.</p>
+    <div class="hero-btns">
+      <a href="https://wa.me/5521999999999?text=Olá!%20Gostaria%20de%20simular%20um%20empréstimo." class="btn-primary" target="_blank">
+        <i class="fab fa-whatsapp"></i> Falar Agora
+      </a>
+      <a href="#simule" class="btn-secondary">
+        <i class="fas fa-calculator"></i> Simular Crédito
+      </a>
+    </div>
+  </div>
+  <div class="hero-stats">
+    <div class="stat-card"><strong>+10 mil</strong><span>Clientes atendidos</span></div>
+    <div class="stat-card"><strong>96x</strong><span>Maior prazo do mercado</span></div>
+    <div class="stat-card"><strong>24h</strong><span>Aprovação rápida</span></div>
+  </div>
+</section>
+
+<!-- SIMULADOR -->
+<section id="simule">
+  <div class="section-header">
+    <div class="section-label">Sem compromisso</div>
+    <h2>Simule o Seu Empréstimo</h2>
+    <p>Em menos de 2 minutos descubra quanto você pode receber</p>
+  </div>
+  <div class="sim-wrapper">
+    <div class="sim-header">
+      <h3>Calculadora de Crédito</h3>
+      <p>Preencha os dados abaixo — é rápido e gratuito</p>
+    </div>
+    <div class="sim-steps">
+      <div class="sim-step active" id="step1"><div class="step-circle">1</div><span class="step-label">Identificação</span></div>
+      <div class="sim-step" id="step2"><div class="step-circle">2</div><span class="step-label">Telefone</span></div>
+      <div class="sim-step" id="step3"><div class="step-circle">3</div><span class="step-label">Produto</span></div>
+      <div class="sim-step" id="step4"><div class="step-circle">4</div><span class="step-label">Resultado</span></div>
+    </div>
+    <div class="sim-body">
+      <!-- Passo 1 -->
+      <div class="sim-page active" id="page1">
+        <div class="form-group"><label>Nome completo *</label><input type="text" id="sim-nome" placeholder="Digite o seu nome" /></div>
+        <div class="form-group"><label>E-mail *</label><input type="email" id="sim-email" placeholder="Digite o seu e-mail" /></div>
+        <div class="sim-nav"><button class="btn-sim-next" onclick="simNext(1)">Próximo <i class="fas fa-arrow-right"></i></button></div>
+      </div>
+      <!-- Passo 2 -->
+      <div class="sim-page" id="page2">
+        <div class="form-group"><label>WhatsApp / Celular *</label><input type="tel" id="sim-tel" placeholder="(00) 00000-0000" /></div>
+        <div class="sim-nav">
+          <button class="btn-sim-back" onclick="simBack(2)"><i class="fas fa-arrow-left"></i></button>
+          <button class="btn-sim-next" onclick="simNext(2)">Próximo <i class="fas fa-arrow-right"></i></button>
+        </div>
+      </div>
+      <!-- Passo 3 -->
+      <div class="sim-page" id="page3">
+        <div class="form-group">
+          <label>Tipo de crédito *</label>
+          <select id="sim-produto">
+            <option value="">Selecione...</option>
+            <option>Portabilidade de Consignado (INSS)</option>
+            <option>Empréstimo Novo (INSS)</option>
+            <option>Refinanciamento (INSS)</option>
+            <option>Consignado CLT</option>
+            <option>Antecipação FGTS</option>
+            <option>Cartão Benefício</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label>Valor aproximado desejado</label>
+          <select id="sim-valor">
+            <option>Até R$ 5.000</option>
+            <option>R$ 5.000 a R$ 15.000</option>
+            <option>R$ 15.000 a R$ 30.000</option>
+            <option>Acima de R$ 30.000</option>
+          </select>
+        </div>
+        <div class="sim-nav">
+          <button class="btn-sim-back" onclick="simBack(3)"><i class="fas fa-arrow-left"></i></button>
+          <button class="btn-sim-next" onclick="simNext(3)">Ver Resultado <i class="fas fa-arrow-right"></i></button>
+        </div>
+      </div>
+      <!-- Passo 4 -->
+      <div class="sim-page" id="page4">
+        <div class="resultado-box">
+          <i class="fas fa-check-circle"></i>
+          <h4>Simulação Recebida! 🎉</h4>
+          <p>Ótimo, <strong id="res-nome"></strong>! Recebemos seus dados. Um de nossos especialistas vai entrar em contato pelo WhatsApp <strong id="res-tel"></strong> em instantes com a proposta personalizada para você.</p>
+          <a href="#" id="wpp-link" class="btn-wpp" target="_blank"><i class="fab fa-whatsapp"></i> Falar com Especialista Agora</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SERVIÇOS -->
+<section id="servicos">
+  <div class="section-header">
+    <div class="section-label">Transparência, taxas competitivas e agilidade</div>
+    <h2>Nossos Serviços</h2>
+    <p>Conheça as soluções financeiras disponíveis para você</p>
+  </div>
+  <div class="services-grid">
+    <div class="service-card">
+      <img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=600&q=80" alt="Portabilidade" />
+      <div class="service-card-overlay"></div>
+      <div class="service-badge">Portabilidade</div>
+      <div class="service-content">
+        <h3>Portabilidade de Consignado</h3>
+        <p>Migre seu contrato para uma instituição com taxas menores e ainda receba troco em dinheiro.</p>
+        <a href="https://wa.me/5521999999999?text=Quero%20saber%20sobre%20portabilidade" class="service-arrow" target="_blank"><i class="fas fa-arrow-right"></i></a>
+      </div>
+    </div>
+    <div class="service-card">
+      <img src="https://images.unsplash.com/photo-1560250097-0b93528c311a?w=600&q=80" alt="Empréstimo Novo" />
+      <div class="service-card-overlay"></div>
+      <div class="service-badge">Empréstimo Novo</div>
+      <div class="service-content">
+        <h3>Empréstimo Novo INSS</h3>
+        <p>Crédito descontado direto no benefício, com análise rápida e até 96 parcelas.</p>
+        <a href="https://wa.me/5521999999999?text=Quero%20simular%20empréstimo%20novo%20INSS" class="service-arrow" target="_blank"><i class="fas fa-arrow-right"></i></a>
+      </div>
+    </div>
+    <div class="service-card">
+      <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=600&q=80" alt="Refinanciamento" />
+      <div class="service-card-overlay"></div>
+      <div class="service-badge">Refin</div>
+      <div class="service-content">
+        <h3>Refinanciamento</h3>
+        <p>Reorganize prazos e parcelas para ganhar fôlego no orçamento e receber dinheiro extra.</p>
+        <a href="https://wa.me/5521999999999?text=Quero%20refinanciar%20meu%20contrato" class="service-arrow" target="_blank"><i class="fas fa-arrow-right"></i></a>
+      </div>
+    </div>
+    <div class="service-card">
+      <img src="https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?w=600&q=80" alt="CLT" />
+      <div class="service-card-overlay"></div>
+      <div class="service-badge">CLT</div>
+      <div class="service-content">
+        <h3>Consignado CLT</h3>
+        <p>Crédito para trabalhadores com carteira assinada — desconto em folha, sem consulta ao SPC/Serasa.</p>
+        <a href="https://wa.me/5521999999999?text=Quero%20simular%20consignado%20CLT" class="service-arrow" target="_blank"><i class="fas fa-arrow-right"></i></a>
+      </div>
+    </div>
+    <div class="service-card">
+      <img src="https://images.unsplash.com/photo-1531482615713-2afd69097998?w=600&q=80" alt="FGTS" />
+      <div class="service-card-overlay"></div>
+      <div class="service-badge">FGTS</div>
+      <div class="service-content">
+        <h3>Antecipação FGTS</h3>
+        <p>Antecipe o Saque-Aniversário com segurança e receba o valor em poucas horas na sua conta.</p>
+        <a href="https://wa.me/5521999999999?text=Quero%20antecipar%20meu%20FGTS" class="service-arrow" target="_blank"><i class="fas fa-arrow-right"></i></a>
+      </div>
+    </div>
+    <div class="service-card">
+      <img src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=600&q=80" alt="Cartão Benefício" />
+      <div class="service-card-overlay"></div>
+      <div class="service-badge">Cartão</div>
+      <div class="service-content">
+        <h3>Cartão Benefício</h3>
+        <p>Mais liberdade para aposentados e servidores, com limite em folha e sem anuidade.</p>
+        <a href="https://wa.me/5521999999999?text=Quero%20saber%20sobre%20cartão%20benefício" class="service-arrow" target="_blank"><i class="fas fa-arrow-right"></i></a>
+      </div>
+    </div>
+    <div class="service-card" style="background: var(--navy-dark); position: relative; overflow: hidden;">
+      <div style="position: absolute; inset: 0; background: linear-gradient(135deg, var(--navy-dark) 0%, var(--navy-light) 100%);"></div>
+      <div class="service-content" style="position: relative; top: auto; bottom: auto; padding: 32px; display: flex; flex-direction: column; justify-content: center; height: 100%;">
+        <i class="fas fa-star" style="color: var(--orange); font-size: 2rem; margin-bottom: 16px;"></i>
+        <h3 style="font-size: 1.3rem; margin-bottom: 12px;">Por que escolher a M Promotora?</h3>
+        <p style="color: rgba(255,255,255,0.75); font-size: 14px; line-height: 1.7;">Centralize seus serviços financeiros em um só lugar. Reduzimos taxas, aceleramos aprovações e tratamos cada cliente como único. Mais de 10 mil famílias atendidas com transparência e cuidado.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- NÚMEROS -->
+<section id="numeros">
+  <div class="numeros-grid">
+    <div class="numero-item"><strong>+10mil</strong><span>Clientes atendidos</span></div>
+    <div class="numero-item"><strong>96x</strong><span>Maior prazo disponível</span></div>
+    <div class="numero-item"><strong>24h</strong><span>Aprovação média</span></div>
+    <div class="numero-item"><strong>1,49%</strong><span>Taxa a partir de (a.m.)</span></div>
+  </div>
+</section>
+
+<!-- DEPOIMENTOS -->
+<section id="depoimentos">
+  <div class="section-header">
+    <div class="section-label">O que dizem nossos clientes</div>
+    <h2>Avaliações Reais</h2>
+  </div>
+  <div class="reviews-header">
+    <div class="reviews-score">
+      <div class="score-label">EXCELENTE</div>
+      <div class="stars">★★★★★</div>
+      <p>Baseado em avaliações Google</p>
+    </div>
+  </div>
+  <div class="reviews-grid">
+    <div class="review-card">
+      <div class="review-top">
+        <div class="reviewer">
+          <div class="reviewer-avatar">M</div>
+          <div><div class="reviewer-name">Maria Santos</div><div class="reviewer-date">2025-10-15</div></div>
+        </div>
+        <span style="color:#4285F4; font-weight: 800; font-size: 18px;">G</span>
+      </div>
+      <div class="review-stars">★★★★★</div>
+      <p class="review-text" style="margin-top:8px">Atendimento impecável! Consegui minha portabilidade em menos de 2 dias. Recomendo muito a M Promotora!</p>
+    </div>
+    <div class="review-card">
+      <div class="review-top">
+        <div class="reviewer">
+          <div class="reviewer-avatar" style="background:var(--teal)">J</div>
+          <div><div class="reviewer-name">José Oliveira</div><div class="reviewer-date">2025-09-22</div></div>
+        </div>
+        <span style="color:#4285F4; font-weight: 800; font-size: 18px;">G</span>
+      </div>
+      <div class="review-stars">★★★★★</div>
+      <p class="review-text" style="margin-top:8px">Seriedade e rapidez. Me explicaram tudo direitinho, sem enrolação. Recebi o dinheiro no dia seguinte!</p>
+    </div>
+    <div class="review-card">
+      <div class="review-top">
+        <div class="reviewer">
+          <div class="reviewer-avatar" style="background:var(--orange)">A</div>
+          <div><div class="reviewer-name">Ana Paula Ferreira</div><div class="reviewer-date">2025-08-30</div></div>
+        </div>
+        <span style="color:#4285F4; font-weight: 800; font-size: 18px;">G</span>
+      </div>
+      <div class="review-stars">★★★★★</div>
+      <p class="review-text" style="margin-top:8px">Fui super bem atendida. Consegui fazer meu empréstimo consignado com a menor taxa que já vi. Nota 10!</p>
+    </div>
+  </div>
+</section>
+
+<!-- PARCEIROS -->
+<section id="parceiros">
+  <div class="section-header">
+    <div class="section-label">Instituições parceiras</div>
+    <h2>Nossos Parceiros</h2>
+    <p>Trabalhamos com as principais instituições financeiras do Brasil para garantir as melhores condições</p>
+  </div>
+  <div class="parceiros-logos">
+    <div class="parceiro-logo">JoinBank</div>
+    <div class="parceiro-logo">Facta</div>
+    <div class="parceiro-logo">Banco Pan</div>
+    <div class="parceiro-logo">BMG</div>
+    <div class="parceiro-logo">iCred</div>
+    <div class="parceiro-logo">Sabemi</div>
+    <div class="parceiro-logo">C6 Bank</div>
+    <div class="parceiro-logo">Bradesco</div>
+  </div>
+</section>
+
+<!-- CONTATO -->
+<section id="contato">
+  <div class="contato-grid">
+    <div class="contato-info">
+      <h2>Atendimento rápido e fácil é aqui!</h2>
+      <p>Preencha o formulário ao lado ou nos chame diretamente no WhatsApp. Nossa equipe está pronta para atender você.</p>
+      <div class="contato-item"><i class="fas fa-phone"></i><span>(21) 99999-9999</span></div>
+      <div class="contato-item"><i class="fab fa-whatsapp"></i><a href="https://wa.me/5521999999999" target="_blank">(21) 99999-9999 (WhatsApp)</a></div>
+      <div class="contato-item"><i class="fas fa-envelope"></i><a href="mailto:contato@mpromotora.com.br">contato@mpromotora.com.br</a></div>
+      <div class="contato-item"><i class="fas fa-map-marker-alt"></i><span>Rio de Janeiro — RJ</span></div>
+    </div>
+    <div class="contato-form">
+      <div class="form-row">
+        <input type="text" placeholder="Nome" id="ct-nome" />
+        <input type="text" placeholder="Sobrenome" />
+      </div>
+      <div class="form-row">
+        <input type="tel" placeholder="(00) 00000-0000" id="ct-tel" />
+        <select id="ct-servico">
+          <option value="">Selecione o serviço</option>
+          <option>Portabilidade INSS</option>
+          <option>Empréstimo Novo INSS</option>
+          <option>Refinanciamento</option>
+          <option>Consignado CLT</option>
+          <option>FGTS</option>
+          <option>Cartão Benefício</option>
+        </select>
+      </div>
+      <input type="email" placeholder="E-mail" />
+      <button onclick="enviarContato()">Enviar pelo WhatsApp <i class="fas fa-paper-plane"></i></button>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-grid">
+    <div class="footer-brand">
+      <img src="logo.jpg" alt="M Promotora" />
+      <p>Correspondente bancário certificado pela Febraban. Atuamos com transparência, agilidade e as melhores taxas do mercado para aposentados, pensionistas e trabalhadores CLT.</p>
+      <a href="https://wa.me/5521999999999" class="footer-wpp" target="_blank"><i class="fab fa-whatsapp"></i> Fale no WhatsApp</a>
+    </div>
+    <div class="footer-col">
+      <h4>Produtos</h4>
+      <ul>
+        <li><a href="#">Portabilidade</a></li>
+        <li><a href="#">Empréstimo Novo</a></li>
+        <li><a href="#">Refinanciamento</a></li>
+        <li><a href="#">Cartão Benefício</a></li>
+        <li><a href="#">Cartão Consignado</a></li>
+        <li><a href="#">FGTS</a></li>
+        <li><a href="#">Consignado CLT</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h4>Menu</h4>
+      <ul>
+        <li><a href="#inicio">Página Inicial</a></li>
+        <li><a href="#simule">Simule</a></li>
+        <li><a href="#servicos">Serviços</a></li>
+        <li><a href="#parceiros">Parceiros</a></li>
+        <li><a href="#depoimentos">Avaliações</a></li>
+        <li><a href="#contato">Contato</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <p class="footer-legal">A M Promotora de Crédito não é uma instituição financeira e não realiza operações de crédito diretamente. Atua como correspondente bancário para facilitar o processo de contratação de empréstimos, nos termos da Resolução nº 3.954 do Banco Central do Brasil. As taxas e condições praticadas são determinadas exclusivamente pelas instituições financeiras parceiras.</p>
+    <p class="footer-copy">© 2026 M Promotora de Crédito. Todos os direitos reservados.</p>
+  </div>
+</footer>
+
+<!-- WhatsApp Float -->
+<a href="https://wa.me/5521999999999?text=Olá!%20Gostaria%20de%20simular%20um%20empréstimo." class="wpp-float" target="_blank">
+  <div class="wpp-pulse"></div>
+  <i class="fab fa-whatsapp"></i>
+</a>
+
+<!-- Simular Float -->
+<a href="#simule" class="simular-btn">
+  <i class="fas fa-calculator"></i>
+  SIMULAR<br/>CRÉDITO
+</a>
+
+<script>
+  // NAV mobile
+  function toggleNav() { document.getElementById('navbar').classList.toggle('open'); }
+
+  // Nav scroll
+  window.addEventListener('scroll', () => {
+    const nav = document.getElementById('navbar');
+    nav.style.background = window.scrollY > 50 ? 'rgba(15,30,61,0.98)' : 'var(--navy-dark)';
+  });
+
+  // Smooth scroll para links do nav
+  document.querySelectorAll('a[href^="#"]').forEach(a => {
+    a.addEventListener('click', e => {
+      const target = document.querySelector(a.getAttribute('href'));
+      if (target) { e.preventDefault(); target.scrollIntoView({ behavior: 'smooth' }); }
+      document.getElementById('navbar').classList.remove('open');
+    });
+  });
+
+  // SIMULADOR
+  let simData = {};
+  function simNext(step) {
+    if (step === 1) {
+      const nome = document.getElementById('sim-nome').value.trim();
+      const email = document.getElementById('sim-email').value.trim();
+      if (!nome || !email) { alert('Por favor preencha nome e e-mail.'); return; }
+      simData.nome = nome; simData.email = email;
+    }
+    if (step === 2) {
+      const tel = document.getElementById('sim-tel').value.trim();
+      if (!tel) { alert('Por favor informe seu telefone.'); return; }
+      simData.tel = tel;
+    }
+    if (step === 3) {
+      simData.produto = document.getElementById('sim-produto').value;
+      simData.valor = document.getElementById('sim-valor').value;
+      // Monta mensagem WhatsApp
+      const msg = `Olá! Vim pelo site e gostaria de simular:\n\nNome: ${simData.nome}\nE-mail: ${simData.email}\nTelefone: ${simData.tel}\nProduto: ${simData.produto}\nValor: ${simData.valor}`;
+      document.getElementById('wpp-link').href = `https://wa.me/5521999999999?text=${encodeURIComponent(msg)}`;
+      document.getElementById('res-nome').textContent = simData.nome.split(' ')[0];
+      document.getElementById('res-tel').textContent = simData.tel;
+    }
+    setSimStep(step + 1);
+  }
+  function simBack(step) { setSimStep(step - 1); }
+  function setSimStep(n) {
+    for (let i = 1; i <= 4; i++) {
+      document.getElementById(`page${i}`).classList.toggle('active', i === n);
+      const s = document.getElementById(`step${i}`);
+      s.classList.remove('active', 'done');
+      if (i === n) s.classList.add('active');
+      if (i < n) s.classList.add('done');
+    }
+  }
+
+  // CONTATO
+  function enviarContato() {
+    const nome = document.getElementById('ct-nome').value.trim();
+    const tel = document.getElementById('ct-tel').value.trim();
+    const servico = document.getElementById('ct-servico').value;
+    const msg = `Olá! Vim pelo site e gostaria de mais informações.\n\nNome: ${nome || 'Não informado'}\nTelefone: ${tel || 'Não informado'}\nServiço: ${servico || 'Não informado'}`;
+    window.open(`https://wa.me/5521999999999?text=${encodeURIComponent(msg)}`, '_blank');
+  }
+
+  // Animação counters
+  const observeCounters = () => {
+    const counters = document.querySelectorAll('.numero-item strong');
+    const obs = new IntersectionObserver((entries) => {
+      entries.forEach(e => { if (e.isIntersecting) e.target.style.opacity = '1'; });
+    }, { threshold: 0.3 });
+    counters.forEach(c => obs.observe(c));
+  };
+  observeCounters();
+</script>
+</body>
+</html>
