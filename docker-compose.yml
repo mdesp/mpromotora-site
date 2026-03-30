@@ -11,8 +11,6 @@ services:
       placement:
         constraints:
           - node.role == manager
-      restart_policy:
-        condition: on-failure
       labels:
         - traefik.enable=true
         - traefik.http.routers.mpromotora.rule=Host(`mpromotora.turboconversa.online`)
@@ -21,6 +19,7 @@ services:
         - traefik.http.routers.mpromotora.service=mpromotora
         - traefik.http.services.mpromotora.loadbalancer.server.port=80
         - traefik.http.services.mpromotora.loadbalancer.passhostheader=true
+        - traefik.http.middlewares.sslheader.headers.customrequestheaders.X-Forwarded-Proto=https
         - traefik.http.routers.mpromotora.middlewares=sslheader@docker
 
 networks:
