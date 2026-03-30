@@ -407,35 +407,28 @@
           <label>Tipo de crédito *</label>
           <select id="sim-produto">
             <option value="">Selecione...</option>
-            <option>Portabilidade de Consignado (INSS)</option>
-            <option>Empréstimo Novo (INSS)</option>
-            <option>Refinanciamento (INSS)</option>
-            <option>Consignado CLT</option>
-            <option>Antecipação FGTS</option>
-            <option>Cartão Benefício</option>
+            <option value="inss">Aposentado / Pensionista INSS</option>
+            <option value="clt">Trabalhador CLT</option>
+            <option value="fgts">Antecipação FGTS</option>
+            <option value="servidor">Servidor Público</option>
           </select>
         </div>
         <div class="form-group">
-          <label>Valor aproximado desejado</label>
-          <select id="sim-valor">
-            <option>Até R$ 5.000</option>
-            <option>R$ 5.000 a R$ 15.000</option>
-            <option>R$ 15.000 a R$ 30.000</option>
-            <option>Acima de R$ 30.000</option>
-          </select>
+          <label>CPF <span style="color:var(--gray);font-weight:400">(opcional — agiliza a simulação)</span></label>
+          <input type="text" id="sim-cpf" placeholder="000.000.000-00" maxlength="14" />
         </div>
         <div class="sim-nav">
           <button class="btn-sim-back" onclick="simBack(3)"><i class="fas fa-arrow-left"></i></button>
-          <button class="btn-sim-next" onclick="simNext(3)">Ver Resultado <i class="fas fa-arrow-right"></i></button>
+          <button class="btn-sim-next" onclick="simNext(3)" style="background:var(--orange)">Simular pelo WhatsApp <i class="fab fa-whatsapp"></i></button>
         </div>
       </div>
-      <!-- Passo 4 -->
+      <!-- Passo 4 (fallback se popup bloqueado) -->
       <div class="sim-page" id="page4">
         <div class="resultado-box">
           <i class="fas fa-check-circle"></i>
-          <h4>Simulação Recebida! 🎉</h4>
-          <p>Ótimo, <strong id="res-nome"></strong>! Recebemos seus dados. Um de nossos especialistas vai entrar em contato pelo WhatsApp <strong id="res-tel"></strong> em instantes com a proposta personalizada para você.</p>
-          <a href="#" id="wpp-link" class="btn-wpp" target="_blank"><i class="fab fa-whatsapp"></i> Falar com Especialista Agora</a>
+          <h4>Abrindo WhatsApp... 🎉</h4>
+          <p>Ótimo, <strong id="res-nome"></strong>! Nossa assistente virtual Maria já está pronta para te atender. Se o WhatsApp não abriu automaticamente, clique abaixo:</p>
+          <a href="#" id="wpp-link" class="btn-wpp" target="_blank"><i class="fab fa-whatsapp"></i> Abrir WhatsApp</a>
         </div>
       </div>
     </div>
@@ -705,6 +698,18 @@
 
   // SIMULADOR
   let simData = {};
+
+  // Máscara CPF
+  document.addEventListener('input', e => {
+    if (e.target.id === 'sim-cpf') {
+      let v = e.target.value.replace(/\D/g,'').slice(0,11);
+      if (v.length > 9) v = v.replace(/(\d{3})(\d{3})(\d{3})(\d{2})/,'$1.$2.$3-$4');
+      else if (v.length > 6) v = v.replace(/(\d{3})(\d{3})(\d+)/,'$1.$2.$3');
+      else if (v.length > 3) v = v.replace(/(\d{3})(\d+)/,'$1.$2');
+      e.target.value = v;
+    }
+  });
+
   function simNext(step) {
     if (step === 1) {
       const nome = document.getElementById('sim-nome').value.trim();
@@ -718,13 +723,35 @@
       simData.tel = tel;
     }
     if (step === 3) {
-      simData.produto = document.getElementById('sim-produto').value;
-      simData.valor = document.getElementById('sim-valor').value;
-      // Monta mensagem WhatsApp
-      const msg = `Olá! Vim pelo site e gostaria de simular:\n\nNome: ${simData.nome}\nE-mail: ${simData.email}\nTelefone: ${simData.tel}\nProduto: ${simData.produto}\nValor: ${simData.valor}`;
-      document.getElementById('wpp-link').href = `https://wa.me/5524988181891?text=${encodeURIComponent(msg)}`;
-      document.getElementById('res-nome').textContent = simData.nome.split(' ')[0];
+      const produto = document.getElementById('sim-produto').value;
+      if (!produto) { alert('Por favor selecione o tipo de crédito.'); return; }
+      simData.produto = produto;
+      simData.cpf = document.getElementById('sim-cpf').value.replace(/\D/g,'');
+
+      // Monta mensagem que aciona a Maria diretamente
+      const primeiroNome = simData.nome.split(' ')[0];
+      let msg = '';
+      if (simData.cpf.length === 11) {
+        // Com CPF: Maria já consulta automaticamente
+        msg = `Olá! Me chamo ${simData.nome} e quero simular um crédito. Meu CPF é ${simData.cpf}.`;
+      } else {
+        // Sem CPF: apresenta contexto para Maria perguntar o CPF
+        const produtoTexto = {
+          inss: 'sou aposentado/pensionista INSS',
+          clt: 'sou trabalhador CLT',
+          fgts: 'quero antecipar meu FGTS',
+          servidor: 'sou servidor público',
+        }[produto] || 'quero simular um crédito';
+        msg = `Olá! Me chamo ${simData.nome} e ${produtoTexto}. Quero simular um empréstimo.`;
+      }
+
+      const wppUrl = `https://wa.me/5524988181891?text=${encodeURIComponent(msg)}`;
+      document.getElementById('wpp-link').href = wppUrl;
+      document.getElementById('res-nome').textContent = primeiroNome;
       document.getElementById('res-tel').textContent = simData.tel;
+
+      // Abre WhatsApp direto
+      window.open(wppUrl, '_blank');
     }
     setSimStep(step + 1);
   }
