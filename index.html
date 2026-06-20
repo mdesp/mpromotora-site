@@ -1,419 +1,416 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>M Promotora de Crédito — Crédito Rápido e Sem Burocracia</title>
-  <meta name="description" content="Crédito consignado para aposentados, pensionistas e trabalhadores CLT. Portabilidade, empréstimo novo, FGTS e muito mais. Atendimento rápido pelo WhatsApp." />
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
-  <style>
-    :root {
-      --navy: #1a2f5a;
-      --navy-dark: #0f1e3d;
-      --navy-light: #2a4080;
-      --orange: #e07b2a;
-      --orange-dark: #c4671e;
-      --teal: #0ea5d9;
-      --teal-dark: #0284a8;
-      --white: #ffffff;
-      --gray-light: #f4f6fb;
-      --gray: #64748b;
-    }
-    * { margin: 0; padding: 0; box-sizing: border-box; scroll-behavior: smooth; }
-    body { font-family: 'Inter', sans-serif; color: #1e293b; overflow-x: hidden; }
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>M Promotora de Crédito | Consignado INSS e CLT em Volta Redonda/RJ</title>
+<meta name="description" content="Correspondente bancário em Volta Redonda/RJ. Crédito consignado para aposentados, pensionistas INSS e trabalhadores CLT: portabilidade, empréstimo novo, refinanciamento, FGTS e cartão benefício. Simule rápido pelo WhatsApp." />
+<meta name="keywords" content="empréstimo consignado Volta Redonda, crédito consignado INSS, portabilidade consignado, antecipação FGTS, consignado CLT, correspondente bancário Volta Redonda, empréstimo aposentado Sul Fluminense, refinanciamento consignado RJ" />
+<meta name="author" content="M Promotora de Crédito" />
+<meta name="robots" content="index, follow" />
+<meta name="geo.region" content="BR-RJ" />
+<meta name="geo.placename" content="Volta Redonda" />
+<meta name="geo.position" content="-22.5231;-44.1042" />
+<meta name="ICBM" content="-22.5231, -44.1042" />
+<meta name="theme-color" content="#0c1b38" />
+<link rel="canonical" href="https://mpromotora.turboconversa.online/" />
+<link rel="icon" type="image/jpeg" href="logo.jpg" />
+<link rel="apple-touch-icon" href="logo.jpg" />
 
-    /* ── NAV ── */
-    nav {
-      position: fixed; top: 0; left: 0; right: 0; z-index: 1000;
-      background: var(--navy-dark);
-      display: flex; align-items: center; justify-content: space-between;
-      padding: 0 5%; height: 70px;
-      box-shadow: 0 2px 20px rgba(0,0,0,0.3);
-    }
-    .nav-logo { display: flex; align-items: center; gap: 10px; }
-    .nav-logo img { height: 48px; border-radius: 8px; }
-    .nav-links { display: flex; gap: 30px; list-style: none; }
-    .nav-links a { color: rgba(255,255,255,0.85); text-decoration: none; font-size: 13px; font-weight: 600; letter-spacing: 0.5px; text-transform: uppercase; transition: color 0.2s; }
-    .nav-links a:hover { color: var(--orange); }
-    .nav-cta { background: var(--orange); color: white; border: none; padding: 10px 22px; border-radius: 25px; font-size: 13px; font-weight: 700; cursor: pointer; text-decoration: none; transition: background 0.2s; }
-    .nav-cta:hover { background: var(--orange-dark); }
-    .hamburger { display: none; flex-direction: column; gap: 5px; cursor: pointer; }
-    .hamburger span { width: 25px; height: 2px; background: white; border-radius: 2px; transition: 0.3s; }
+<!-- Open Graph -->
+<meta property="og:type" content="website" />
+<meta property="og:locale" content="pt_BR" />
+<meta property="og:site_name" content="M Promotora de Crédito" />
+<meta property="og:title" content="M Promotora de Crédito | Consignado INSS e CLT em Volta Redonda/RJ" />
+<meta property="og:description" content="Crédito consignado para aposentados, pensionistas INSS e CLT em Volta Redonda e região. Portabilidade, empréstimo novo, FGTS e cartão benefício. Atendimento rápido pelo WhatsApp." />
+<meta property="og:image" content="https://mpromotora.turboconversa.online/logo.jpg" />
+<meta property="og:url" content="https://mpromotora.turboconversa.online/" />
 
-    /* ── HERO ── */
-    #inicio {
-      height: 100vh; min-height: 600px;
-      background: linear-gradient(135deg, rgba(15,30,61,0.92) 0%, rgba(26,47,90,0.85) 60%, rgba(14,165,217,0.4) 100%),
-        url('https://images.unsplash.com/photo-1573497019940-1c28c88b4f3e?w=1600&q=80') center/cover no-repeat;
-      display: flex; align-items: center;
-      padding: 0 5%; position: relative;
-    }
-    .hero-content { max-width: 680px; }
-    .hero-badge {
-      display: inline-flex; align-items: center; gap: 8px;
-      background: rgba(255,255,255,0.1); border: 1px solid rgba(255,255,255,0.2);
-      color: white; padding: 6px 16px; border-radius: 20px; font-size: 13px; font-weight: 600;
-      margin-bottom: 24px; backdrop-filter: blur(4px);
-    }
-    .hero-badge i { color: var(--orange); }
-    .hero-content h1 {
-      font-size: clamp(2.5rem, 5vw, 4rem); font-weight: 900; color: white; line-height: 1.1;
-      margin-bottom: 20px;
-    }
-    .hero-content h1 span { color: var(--orange); }
-    .hero-content p { font-size: 1.15rem; color: rgba(255,255,255,0.8); margin-bottom: 36px; line-height: 1.7; max-width: 500px; }
-    .hero-btns { display: flex; gap: 14px; flex-wrap: wrap; }
-    .btn-primary {
-      background: var(--orange); color: white; padding: 15px 32px; border-radius: 50px;
-      font-size: 15px; font-weight: 700; text-decoration: none; display: inline-flex;
-      align-items: center; gap: 10px; transition: all 0.2s; box-shadow: 0 4px 20px rgba(224,123,42,0.5);
-    }
-    .btn-primary:hover { background: var(--orange-dark); transform: translateY(-2px); }
-    .btn-secondary {
-      background: transparent; color: white; padding: 15px 32px; border-radius: 50px;
-      font-size: 15px; font-weight: 700; text-decoration: none; display: inline-flex;
-      align-items: center; gap: 10px; border: 2px solid rgba(255,255,255,0.4); transition: all 0.2s;
-    }
-    .btn-secondary:hover { border-color: white; background: rgba(255,255,255,0.1); }
-    .hero-stats {
-      position: absolute; bottom: 40px; right: 5%;
-      display: flex; gap: 20px;
-    }
-    .stat-card {
-      background: rgba(255,255,255,0.08); backdrop-filter: blur(10px);
-      border: 1px solid rgba(255,255,255,0.15);
-      padding: 16px 24px; border-radius: 16px; text-align: center; color: white;
-    }
-    .stat-card strong { display: block; font-size: 1.6rem; font-weight: 800; color: var(--orange); }
-    .stat-card span { font-size: 12px; opacity: 0.8; }
-    .simular-btn {
-      position: fixed; bottom: 90px; right: 20px; z-index: 999;
-      background: var(--navy-dark); color: white;
-      padding: 12px 20px; border-radius: 12px; font-size: 13px; font-weight: 700;
-      text-decoration: none; display: flex; flex-direction: column; align-items: center; gap: 4px;
-      box-shadow: 0 4px 20px rgba(0,0,0,0.3); transition: transform 0.2s;
-    }
-    .simular-btn:hover { transform: translateY(-2px); }
-    .simular-btn i { font-size: 1.2rem; color: var(--teal); }
+<!-- Twitter -->
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:title" content="M Promotora de Crédito | Consignado em Volta Redonda/RJ" />
+<meta name="twitter:description" content="Consignado INSS e CLT, portabilidade, FGTS e cartão benefício. Atendimento rápido pelo WhatsApp." />
+<meta name="twitter:image" content="https://mpromotora.turboconversa.online/logo.jpg" />
 
-    /* ── SECTION COMUM ── */
-    section { padding: 80px 5%; }
-    .section-header { text-align: center; margin-bottom: 56px; }
-    .section-label { color: var(--orange); font-size: 13px; font-weight: 700; letter-spacing: 2px; text-transform: uppercase; margin-bottom: 10px; }
-    .section-header h2 { font-size: clamp(1.8rem, 3vw, 2.6rem); font-weight: 800; color: var(--navy-dark); }
-    .section-header p { color: var(--gray); margin-top: 14px; font-size: 1rem; max-width: 600px; margin-left: auto; margin-right: auto; line-height: 1.7; }
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Sora:wght@600;700;800&family=Public+Sans:wght@400;500;600;700&display=swap" rel="stylesheet" />
 
-    /* ── SIMULADOR ── */
-    #simule { background: var(--gray-light); }
-    .sim-wrapper {
-      max-width: 700px; margin: 0 auto;
-      background: white; border-radius: 24px; overflow: hidden;
-      box-shadow: 0 20px 60px rgba(0,0,0,0.1);
-    }
-    .sim-header { background: var(--navy-dark); padding: 32px; text-align: center; }
-    .sim-header h3 { color: white; font-size: 1.5rem; font-weight: 800; }
-    .sim-header p { color: rgba(255,255,255,0.7); font-size: 14px; margin-top: 6px; }
-    .sim-steps { display: flex; justify-content: center; gap: 0; padding: 24px 32px 0; }
-    .sim-step {
-      display: flex; flex-direction: column; align-items: center; gap: 6px;
-      flex: 1; position: relative;
-    }
-    .sim-step:not(:last-child)::after {
-      content: ''; position: absolute; top: 18px; left: 60%; width: 80%; height: 2px;
-      background: #e2e8f0; z-index: 0;
-    }
-    .sim-step.active::after { background: var(--teal); }
-    .step-circle {
-      width: 36px; height: 36px; border-radius: 50%;
-      background: #e2e8f0; color: #94a3b8;
-      display: flex; align-items: center; justify-content: center;
-      font-size: 14px; font-weight: 700; position: relative; z-index: 1; transition: all 0.3s;
-    }
-    .sim-step.active .step-circle { background: var(--teal); color: white; }
-    .sim-step.done .step-circle { background: var(--orange); color: white; }
-    .step-label { font-size: 11px; font-weight: 600; color: #94a3b8; }
-    .sim-step.active .step-label { color: var(--teal); }
-    .sim-body { padding: 32px; }
-    .sim-page { display: none; }
-    .sim-page.active { display: block; }
-    .form-group { margin-bottom: 20px; }
-    .form-group label { display: block; font-size: 13px; font-weight: 600; color: var(--navy); margin-bottom: 8px; }
-    .form-group input, .form-group select {
-      width: 100%; padding: 14px 16px; border: 1.5px solid #e2e8f0; border-radius: 12px;
-      font-size: 15px; font-family: 'Inter', sans-serif; transition: border 0.2s; outline: none;
-    }
-    .form-group input:focus, .form-group select:focus { border-color: var(--teal); }
-    .sim-nav { display: flex; justify-content: space-between; margin-top: 24px; gap: 12px; }
-    .btn-sim-next {
-      flex: 1; background: var(--teal); color: white; border: none; padding: 14px;
-      border-radius: 12px; font-size: 15px; font-weight: 700; cursor: pointer; transition: background 0.2s;
-    }
-    .btn-sim-next:hover { background: var(--teal-dark); }
-    .btn-sim-back {
-      background: var(--gray-light); color: var(--navy); border: none; padding: 14px 20px;
-      border-radius: 12px; font-size: 14px; font-weight: 600; cursor: pointer;
-    }
-    .resultado-box { text-align: center; padding: 20px 0; }
-    .resultado-box i { font-size: 3rem; color: var(--teal); margin-bottom: 16px; }
-    .resultado-box h4 { font-size: 1.4rem; font-weight: 800; color: var(--navy-dark); margin-bottom: 8px; }
-    .resultado-box p { color: var(--gray); margin-bottom: 24px; line-height: 1.6; }
-    .btn-wpp {
-      display: inline-flex; align-items: center; gap: 10px;
-      background: #25D366; color: white; padding: 15px 32px;
-      border-radius: 50px; font-size: 15px; font-weight: 700;
-      text-decoration: none; box-shadow: 0 4px 15px rgba(37,211,102,0.4);
-    }
+<!-- Dados estruturados (rich results no Google) -->
+<script type="application/ld+json">
+{
+  "@context":"https://schema.org",
+  "@type":["FinancialService","LocalBusiness"],
+  "name":"M Promotora de Crédito",
+  "image":"https://mpromotora.turboconversa.online/logo.jpg",
+  "@id":"https://mpromotora.turboconversa.online/",
+  "url":"https://mpromotora.turboconversa.online/",
+  "telephone":"+55-24-98818-1891",
+  "priceRange":"$$",
+  "currenciesAccepted":"BRL",
+  "address":{"@type":"PostalAddress","streetAddress":"Av. Amaral Peixoto, 228 - Centro","addressLocality":"Volta Redonda","addressRegion":"RJ","postalCode":"27253-220","addressCountry":"BR"},
+  "geo":{"@type":"GeoCoordinates","latitude":-22.5231,"longitude":-44.1042},
+  "areaServed":[{"@type":"City","name":"Volta Redonda"},{"@type":"AdministrativeArea","name":"Sul Fluminense"},{"@type":"State","name":"Rio de Janeiro"}],
+  "openingHoursSpecification":[{"@type":"OpeningHoursSpecification","dayOfWeek":["Monday","Tuesday","Wednesday","Thursday","Friday"],"opens":"09:00","closes":"18:00"}],
+  "sameAs":["https://wa.me/5524988181891"],
+  "description":"Correspondente bancário em Volta Redonda/RJ. Crédito consignado para aposentados, pensionistas INSS e trabalhadores CLT: portabilidade, empréstimo novo, refinanciamento, antecipação FGTS e cartão benefício.",
+  "aggregateRating":{"@type":"AggregateRating","ratingValue":"5.0","bestRating":"5","reviewCount":"3"},
+  "review":[
+    {"@type":"Review","author":{"@type":"Person","name":"Maria Santos"},"reviewRating":{"@type":"Rating","ratingValue":"5"},"reviewBody":"Atendimento impecável! Consegui minha portabilidade em menos de 2 dias."},
+    {"@type":"Review","author":{"@type":"Person","name":"José Oliveira"},"reviewRating":{"@type":"Rating","ratingValue":"5"},"reviewBody":"Seriedade e rapidez. Recebi o dinheiro no dia seguinte!"},
+    {"@type":"Review","author":{"@type":"Person","name":"Ana Paula Ferreira"},"reviewRating":{"@type":"Rating","ratingValue":"5"},"reviewBody":"Fui super bem atendida, com a menor taxa que já vi."}
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context":"https://schema.org",
+  "@type":"FAQPage",
+  "mainEntity":[
+    {"@type":"Question","name":"Quem pode contratar crédito consignado?","acceptedAnswer":{"@type":"Answer","text":"Aposentados e pensionistas do INSS, trabalhadores CLT com carteira assinada e servidores públicos. O desconto das parcelas é feito direto no benefício ou na folha de pagamento."}},
+    {"@type":"Question","name":"O consignado consulta o SPC/Serasa?","acceptedAnswer":{"@type":"Answer","text":"Não. Por ser descontado em folha ou no benefício, o crédito consignado normalmente não consulta SPC/Serasa, o que facilita a aprovação mesmo para quem está negativado."}},
+    {"@type":"Question","name":"Em quanto tempo o dinheiro cai na conta?","acceptedAnswer":{"@type":"Answer","text":"Após a aprovação, o valor costuma ser liberado em até 24 horas, dependendo da instituição financeira parceira."}},
+    {"@type":"Question","name":"O que é portabilidade de consignado?","acceptedAnswer":{"@type":"Answer","text":"É a migração do seu contrato atual para uma instituição com taxa menor. Além de reduzir a parcela, você pode receber troco em dinheiro."}}
+  ]
+}
+</script>
 
-    /* ── SERVIÇOS ── */
-    #servicos { background: white; }
-    .services-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(260px, 1fr)); gap: 24px; }
-    .service-card {
-      border-radius: 20px; overflow: hidden; position: relative;
-      cursor: pointer; transition: transform 0.3s, box-shadow 0.3s;
-      box-shadow: 0 4px 20px rgba(0,0,0,0.08);
-      min-height: 320px;
-    }
-    .service-card:hover { transform: translateY(-6px); box-shadow: 0 12px 40px rgba(0,0,0,0.15); }
-    .service-card img { width: 100%; height: 100%; object-fit: cover; position: absolute; inset: 0; }
-    .service-card-overlay {
-      position: absolute; inset: 0;
-      background: linear-gradient(to top, rgba(10,20,50,0.9) 40%, rgba(10,20,50,0.1) 100%);
-    }
-    .service-badge {
-      position: absolute; top: 16px; left: 16px;
-      background: var(--teal); color: white;
-      padding: 5px 14px; border-radius: 20px; font-size: 12px; font-weight: 700;
-    }
-    .service-content {
-      position: absolute; bottom: 0; left: 0; right: 0; padding: 24px;
-    }
-    .service-content h3 { color: white; font-size: 1.2rem; font-weight: 800; margin-bottom: 8px; }
-    .service-content p { color: rgba(255,255,255,0.8); font-size: 13px; line-height: 1.5; margin-bottom: 16px; }
-    .service-actions { display: flex; align-items: center; gap: 10px; }
-    .btn-contrate {
-      flex: 1; background: var(--orange); color: white; padding: 10px 16px;
-      border-radius: 25px; font-size: 13px; font-weight: 700; text-decoration: none;
-      display: inline-flex; align-items: center; justify-content: center; gap: 6px;
-      transition: background 0.2s; white-space: nowrap;
-    }
-    .btn-contrate:hover { background: var(--orange-dark); }
-    .service-arrow {
-      width: 36px; height: 36px; background: var(--teal); border-radius: 50%;
-      display: flex; align-items: center; justify-content: center; color: white;
-      text-decoration: none; font-size: 14px; transition: background 0.2s; flex-shrink: 0;
-    }
-    .service-arrow:hover { background: var(--orange); }
-    .why-box {
-      background: var(--navy-dark); border-radius: 20px; padding: 32px; color: white;
-      min-height: 320px; display: flex; flex-direction: column; justify-content: center;
-    }
-    .why-box h3 { font-size: 1.4rem; font-weight: 800; margin-bottom: 12px; }
-    .why-box p { color: rgba(255,255,255,0.75); font-size: 14px; line-height: 1.7; }
+<style>
+  *{margin:0;padding:0;box-sizing:border-box}
+  :root{
+    --navy:#0c1b38;--navy2:#16356b;--cobre:#cf6b2c;--cobre2:#b85a1f;--cobre-l:#f0934a;
+    --cream:#f5f3ee;--ink:#16233c;--muted:#5d6b80;--line:#ece7dc;--wa:#1f9d57;--wa2:#178047;
+  }
+  html{scroll-behavior:smooth}
+  body{font-family:'Public Sans',system-ui,sans-serif;color:var(--ink);background:#fff;-webkit-font-smoothing:antialiased;overflow-x:hidden;line-height:1.5}
+  a{text-decoration:none}
+  img{display:block}
+  ::selection{background:var(--cobre);color:#fff}
+  .wrap{max-width:1180px;margin:0 auto}
+  .sec{padding:clamp(64px,8vw,104px) clamp(20px,5vw,40px)}
+  h1,h2,h3,h4{font-family:'Sora',sans-serif;letter-spacing:-.4px}
+  .eyebrow{color:var(--cobre);font-size:13px;font-weight:700;letter-spacing:2px;text-transform:uppercase;margin-bottom:12px}
+  .h2{font-weight:800;color:var(--navy);font-size:clamp(1.9rem,3.2vw,2.7rem);line-height:1.1}
+  .lead{color:var(--muted);font-size:1.08rem;margin-top:14px;line-height:1.6}
+  .btn{display:inline-flex;align-items:center;justify-content:center;gap:9px;font-weight:700;border-radius:50px;cursor:pointer;border:none;transition:all .2s;font-size:15px}
+  .btn svg{flex:none}
+  .btn-cobre{background:var(--cobre);color:#fff;padding:16px 30px;box-shadow:0 8px 26px rgba(207,107,44,.4)}
+  .btn-cobre:hover{background:var(--cobre2);transform:translateY(-2px)}
+  .btn-ghost{background:rgba(255,255,255,.06);color:#fff;padding:16px 30px;border:1.5px solid rgba(255,255,255,.35)}
+  .btn-ghost:hover{background:rgba(255,255,255,.12)}
+  .btn-wa{background:var(--wa);color:#fff;padding:15px 30px;box-shadow:0 8px 22px rgba(31,157,87,.35)}
+  .btn-wa:hover{background:var(--wa2)}
 
-    /* ── NÚMEROS ── */
-    #numeros { background: var(--navy-dark); }
-    .numeros-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 32px; text-align: center; }
-    .numero-item strong { display: block; font-size: clamp(2.5rem, 5vw, 4rem); font-weight: 900; color: var(--orange); }
-    .numero-item span { color: rgba(255,255,255,0.7); font-size: 14px; margin-top: 6px; display: block; }
+  /* utility bar */
+  .ubar{background:var(--navy);color:#cdd6e6;font-size:13px;font-weight:500;display:flex;justify-content:center;gap:8px 28px;flex-wrap:wrap;align-items:center;padding:9px 20px;text-align:center}
+  .ubar .dot{display:inline-block;width:7px;height:7px;border-radius:50%;background:#3fcf6b;margin-right:7px}
+  .ubar a{color:#f0b483;font-weight:700}
+  .ubar .sep{opacity:.4}
 
-    /* ── DEPOIMENTOS ── */
-    #depoimentos { background: var(--gray-light); }
-    .reviews-header { display: flex; align-items: center; gap: 40px; margin-bottom: 40px; flex-wrap: wrap; }
-    .reviews-score { text-align: center; }
-    .reviews-score .score-label { font-size: 13px; font-weight: 700; letter-spacing: 1px; color: var(--navy-dark); margin-bottom: 4px; }
-    .stars { color: #facc15; font-size: 1.6rem; margin-bottom: 4px; }
-    .reviews-score p { font-size: 12px; color: var(--gray); }
-    .reviews-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: 20px; }
-    .review-card {
-      background: white; border-radius: 16px; padding: 24px;
-      box-shadow: 0 2px 12px rgba(0,0,0,0.06); transition: box-shadow 0.2s;
-    }
-    .review-card:hover { box-shadow: 0 6px 24px rgba(0,0,0,0.1); }
-    .review-top { display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 12px; }
-    .reviewer { display: flex; align-items: center; gap: 10px; }
-    .reviewer-avatar {
-      width: 40px; height: 40px; border-radius: 50%;
-      background: var(--navy); color: white;
-      display: flex; align-items: center; justify-content: center; font-weight: 700; font-size: 14px;
-    }
-    .reviewer-name { font-size: 14px; font-weight: 700; color: var(--navy-dark); }
-    .reviewer-date { font-size: 12px; color: var(--gray); }
-    .review-stars { color: #facc15; font-size: 13px; }
-    .review-text { font-size: 14px; color: #475569; line-height: 1.6; }
+  /* header */
+  header{position:sticky;top:0;z-index:1000;background:rgba(12,27,56,.97);backdrop-filter:blur(8px);box-shadow:0 2px 24px rgba(0,0,0,.22)}
+  .nav{display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:10px 18px;padding:12px clamp(16px,4vw,32px)}
+  .brand{display:flex;align-items:center;gap:12px}
+  .brand img{height:50px;width:50px;border-radius:11px;object-fit:cover;box-shadow:0 2px 10px rgba(0,0,0,.3)}
+  .brand .bt{display:flex;flex-direction:column;line-height:1.05}
+  .brand .bt b{font-family:'Sora',sans-serif;font-weight:800;font-size:18px;color:#fff}
+  .brand .bt span{font-size:11px;font-weight:600;letter-spacing:2.5px;color:var(--cobre);text-transform:uppercase}
+  .menu{display:flex;align-items:center;gap:6px 22px;flex-wrap:wrap;justify-content:center}
+  .menu a{color:#c6cfe0;font-size:13.5px;font-weight:600}
+  .menu a:hover{color:var(--cobre-l)}
+  .menu .cta{background:var(--cobre);color:#fff;padding:10px 20px;border-radius:40px;display:inline-flex;align-items:center;gap:8px;box-shadow:0 4px 14px rgba(207,107,44,.45)}
+  .menu .cta:hover{color:#fff;background:var(--cobre2)}
+  .burger{display:none}
 
-    /* ── CTA CONTATO ── */
-    #contato { background: linear-gradient(135deg, var(--teal) 0%, var(--teal-dark) 100%); }
-    .contato-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 60px; align-items: center; }
-    .contato-info h2 { color: white; font-size: clamp(1.8rem, 3vw, 2.4rem); font-weight: 800; margin-bottom: 16px; }
-    .contato-info p { color: rgba(255,255,255,0.85); font-size: 1rem; line-height: 1.7; margin-bottom: 32px; }
-    .contato-item { display: flex; align-items: center; gap: 12px; margin-bottom: 16px; color: white; }
-    .contato-item i { width: 36px; height: 36px; background: rgba(255,255,255,0.15); border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 14px; }
-    .contato-item a { color: white; text-decoration: none; font-weight: 600; }
-    .contato-form { background: white; border-radius: 24px; padding: 36px; box-shadow: 0 20px 60px rgba(0,0,0,0.15); }
-    .form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
-    .contato-form input, .contato-form select {
-      width: 100%; padding: 13px 16px; border: 1.5px solid #e2e8f0; border-radius: 10px;
-      font-size: 14px; font-family: 'Inter', sans-serif; outline: none; transition: border 0.2s;
-      margin-bottom: 14px;
-    }
-    .contato-form input:focus, .contato-form select:focus { border-color: var(--teal); }
-    .contato-form button {
-      width: 100%; background: var(--teal); color: white; border: none;
-      padding: 15px; border-radius: 10px; font-size: 15px; font-weight: 700;
-      cursor: pointer; transition: background 0.2s;
-    }
-    .contato-form button:hover { background: var(--teal-dark); }
+  /* hero */
+  #inicio{background:radial-gradient(1100px 600px at 78% 10%,rgba(207,107,44,.22),transparent 60%),linear-gradient(160deg,#0c1b38 0%,#122a52 55%,#16356b 100%)}
+  .hero-grid{display:grid;grid-template-columns:1.15fr .85fr;gap:clamp(40px,5vw,72px);align-items:center;padding:clamp(48px,7vw,84px) clamp(20px,5vw,40px)}
+  .badge{display:inline-flex;align-items:center;gap:9px;background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.18);color:#fff;padding:8px 16px;border-radius:40px;font-size:13px;font-weight:600;margin-bottom:24px}
+  #inicio h1{font-weight:800;color:#fff;font-size:clamp(2.3rem,5vw,3.6rem);line-height:1.08;margin-bottom:20px;text-wrap:balance}
+  #inicio h1 span{color:var(--cobre-l)}
+  .hero-sub{color:rgba(255,255,255,.82);font-size:clamp(1.05rem,1.5vw,1.2rem);line-height:1.65;max-width:520px;margin-bottom:34px}
+  .hero-btns{display:flex;gap:14px;flex-wrap:wrap;margin-bottom:38px}
+  .hero-stats{display:flex;gap:14px 30px;flex-wrap:wrap;align-items:center}
+  .hero-stats .vsep{width:1px;height:34px;background:rgba(255,255,255,.18)}
+  .hstat b{display:block;font-family:'Sora',sans-serif;font-weight:800;font-size:1.5rem;color:var(--cobre-l)}
+  .hstat span{font-size:12.5px;color:rgba(255,255,255,.7)}
+  .hero-cards{display:flex;flex-direction:column;gap:16px}
+  .gcard{background:#fff;border-radius:18px;padding:22px 24px;box-shadow:0 18px 50px rgba(0,0,0,.28);display:flex;align-items:center;gap:14px}
+  .gcard .num{font-family:'Sora',sans-serif;font-weight:800;font-size:2.6rem;color:var(--navy);line-height:1}
+  .gcard .stars{color:#f5b301;font-size:18px;letter-spacing:2px}
+  .gcard .sub{font-size:13px;color:var(--muted);font-weight:600;margin-top:2px}
+  .gcard .g{margin-left:auto;font-family:'Sora',sans-serif;font-weight:800;font-size:22px;color:#4285F4}
+  .hero-mini{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+  .mini{border-radius:18px;padding:22px;color:#fff}
+  .mini.fill{background:linear-gradient(150deg,var(--cobre),var(--cobre2));box-shadow:0 14px 40px rgba(207,107,44,.4)}
+  .mini.glass{background:rgba(255,255,255,.07);border:1px solid rgba(255,255,255,.16)}
+  .mini b{display:block;font-family:'Sora',sans-serif;font-weight:800;font-size:1.7rem;line-height:1}
+  .mini span{font-size:12.5px;opacity:.9;margin-top:6px;display:block;font-weight:600}
+  .reg{background:rgba(255,255,255,.07);border:1px solid rgba(255,255,255,.16);border-radius:18px;padding:18px 22px;color:#fff;display:flex;align-items:center;gap:13px;font-size:13.5px;font-weight:500;line-height:1.45}
+  .reg strong{color:#fff}
 
-    /* ── PARCEIROS ── */
-    #parceiros { background: white; }
-    .parceiros-logos { display: flex; flex-wrap: wrap; gap: 20px; justify-content: center; align-items: center; }
-    .parceiro-logo {
-      background: var(--gray-light); border-radius: 16px; padding: 20px 36px;
-      font-size: 18px; font-weight: 800; color: var(--navy); letter-spacing: -0.5px;
-      transition: all 0.2s; border: 1.5px solid transparent;
-    }
-    .parceiro-logo:hover { border-color: var(--teal); color: var(--teal); }
+  /* simulador */
+  #simule{background:var(--cream)}
+  .center-head{max-width:680px;margin:0 auto 48px;text-align:center}
+  .sim{max-width:680px;margin:0 auto;background:#fff;border-radius:24px;overflow:hidden;box-shadow:0 24px 64px rgba(12,27,56,.13);border:1px solid var(--line)}
+  .sim-head{background:linear-gradient(135deg,var(--navy),var(--navy2));padding:30px 32px;text-align:center}
+  .sim-head h3{color:#fff;font-weight:700;font-size:1.4rem}
+  .sim-head p{color:rgba(255,255,255,.72);font-size:14px;margin-top:6px}
+  .steps{display:flex;justify-content:space-between;gap:8px;padding:26px 28px 4px}
+  .step{display:flex;flex-direction:column;align-items:center;gap:8px;flex:1}
+  .step .circle{width:40px;height:40px;border-radius:50%;background:#e2ddd1;color:#9aa3b2;display:flex;align-items:center;justify-content:center;font-family:'Sora',sans-serif;font-weight:800;font-size:15px;transition:all .25s}
+  .step .lbl{font-size:11.5px;font-weight:700;color:#9aa3b2;text-align:center}
+  .step.active .circle{background:var(--cobre);color:#fff}
+  .step.active .lbl{color:var(--cobre)}
+  .step.done .circle{background:var(--wa);color:#fff}
+  .step.done .lbl{color:var(--wa)}
+  .sim-body{padding:28px 32px 34px}
+  .page{display:none}
+  .page.active{display:block}
+  .fg{margin-bottom:18px}
+  .fg label{display:block;font-size:13px;font-weight:700;color:var(--navy);margin-bottom:8px}
+  .fg .opt{color:#9aa3b2;font-weight:500}
+  .fg input,.fg select{width:100%;padding:15px 16px;border:1.5px solid #e2ddd1;border-radius:12px;font-size:15px;color:var(--ink);outline:none;font-family:inherit;background:#fff;transition:border .2s}
+  .fg input:focus,.fg select:focus{border-color:var(--cobre)}
+  .sim-nav{display:flex;justify-content:space-between;gap:12px;margin-top:22px}
+  .btn-back{background:#f0ece2;color:var(--navy);border:none;padding:15px 20px;border-radius:12px;font-size:14px;font-weight:600;cursor:pointer}
+  .btn-next{flex:1;background:var(--cobre);color:#fff;border:none;padding:15px 24px;border-radius:12px;font-size:15px;font-weight:700;cursor:pointer;display:inline-flex;align-items:center;justify-content:center;gap:9px}
+  .btn-next:hover{background:var(--cobre2)}
+  .btn-next.go{background:var(--wa)}
+  .btn-next.go:hover{background:var(--wa2)}
+  .res{text-align:center;padding:12px 0}
+  .res .ok{width:72px;height:72px;border-radius:50%;background:#e6f6ec;display:flex;align-items:center;justify-content:center;margin:0 auto 18px}
+  .res h4{font-weight:800;color:var(--navy);font-size:1.4rem;margin-bottom:10px}
+  .res p{color:var(--muted);font-size:15px;line-height:1.6;max-width:420px;margin:0 auto 24px}
 
-    /* ── FOOTER ── */
-    footer { background: var(--navy-dark); color: white; padding: 60px 5% 30px; }
-    .footer-grid { display: grid; grid-template-columns: 2fr 1fr 1fr; gap: 48px; margin-bottom: 48px; }
-    .footer-brand img { height: 52px; border-radius: 8px; margin-bottom: 20px; }
-    .footer-brand p { color: rgba(255,255,255,0.6); font-size: 14px; line-height: 1.7; margin-bottom: 20px; }
-    .footer-wpp {
-      display: inline-flex; align-items: center; gap: 8px;
-      background: #25D366; color: white; padding: 10px 20px;
-      border-radius: 25px; text-decoration: none; font-size: 14px; font-weight: 700;
-    }
-    .footer-col h4 { font-size: 14px; font-weight: 700; margin-bottom: 20px; color: rgba(255,255,255,0.9); }
-    .footer-col ul { list-style: none; }
-    .footer-col ul li { margin-bottom: 10px; }
-    .footer-col ul li a { color: rgba(255,255,255,0.55); text-decoration: none; font-size: 14px; transition: color 0.2s; }
-    .footer-col ul li a:hover { color: var(--orange); }
-    .footer-contact-item { display: flex; align-items: flex-start; gap: 10px; margin-bottom: 12px; color: rgba(255,255,255,0.6); font-size: 14px; }
-    .footer-contact-item i { color: var(--teal); margin-top: 2px; min-width: 16px; }
-    .footer-bottom { border-top: 1px solid rgba(255,255,255,0.1); padding-top: 28px; }
-    .footer-legal { font-size: 11px; color: rgba(255,255,255,0.35); line-height: 1.6; margin-bottom: 20px; }
-    .footer-copy { font-size: 12px; color: rgba(255,255,255,0.4); text-align: center; }
+  /* serviços */
+  #servicos{background:#fff}
+  .grid-cards{display:grid;grid-template-columns:repeat(auto-fill,minmax(290px,1fr));gap:22px}
+  .card{background:#fff;border:1px solid var(--line);border-radius:20px;padding:28px;box-shadow:0 4px 18px rgba(12,27,56,.05);transition:transform .25s,box-shadow .25s}
+  .card:hover{transform:translateY(-6px);box-shadow:0 16px 40px rgba(12,27,56,.12)}
+  .card .ico{width:54px;height:54px;border-radius:14px;background:#fbeee2;display:flex;align-items:center;justify-content:center;margin-bottom:18px}
+  .tag{display:inline-block;background:#fbeee2;color:var(--cobre);font-size:11.5px;font-weight:700;letter-spacing:.5px;padding:4px 11px;border-radius:20px;margin-bottom:12px}
+  .card h3{font-weight:700;color:var(--navy);font-size:1.22rem;margin-bottom:9px}
+  .card p{color:var(--muted);font-size:14.5px;line-height:1.6;margin-bottom:20px}
+  .card .more{display:inline-flex;align-items:center;gap:8px;color:var(--cobre);font-weight:700;font-size:14.5px}
 
-    /* ── WHATSAPP FLOAT ── */
-    .wpp-float {
-      position: fixed; bottom: 24px; right: 24px; z-index: 999;
-      width: 58px; height: 58px; background: #25D366; border-radius: 50%;
-      display: flex; align-items: center; justify-content: center;
-      box-shadow: 0 4px 20px rgba(37,211,102,0.5); transition: transform 0.2s;
-      text-decoration: none;
-    }
-    .wpp-float:hover { transform: scale(1.1); }
-    .wpp-float i { font-size: 1.6rem; color: white; }
-    .wpp-pulse {
-      position: absolute; inset: -4px; border-radius: 50%;
-      background: rgba(37,211,102,0.3); animation: pulse 2s infinite;
-    }
-    @keyframes pulse { 0%,100%{transform:scale(1);opacity:0.8} 50%{transform:scale(1.2);opacity:0} }
+  /* numeros */
+  .numbers{background:linear-gradient(135deg,var(--navy),var(--navy2));padding:clamp(56px,7vw,86px) clamp(20px,5vw,40px)}
+  .numbers .g{display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:36px;text-align:center;max-width:1100px;margin:0 auto}
+  .numbers b{display:block;font-family:'Sora',sans-serif;font-weight:800;font-size:clamp(2.4rem,5vw,3.4rem);color:var(--cobre-l);line-height:1}
+  .numbers span{color:rgba(255,255,255,.72);font-size:14.5px;margin-top:8px;display:block}
 
-    /* ── RESPONSIVE ── */
-    @media (max-width: 768px) {
-      .nav-links, .nav-cta { display: none; }
-      .hamburger { display: flex; }
-      nav.open .nav-links {
-        display: flex; flex-direction: column; position: absolute;
-        top: 70px; left: 0; right: 0; background: var(--navy-dark);
-        padding: 20px 5%; gap: 16px;
-      }
-      .hero-stats { display: none; }
-      .contato-grid { grid-template-columns: 1fr; }
-      .footer-grid { grid-template-columns: 1fr; }
-      .form-row { grid-template-columns: 1fr; }
-      .services-grid { grid-template-columns: 1fr 1fr; }
-    }
-    @media (max-width: 480px) {
-      .services-grid { grid-template-columns: 1fr; }
-    }
-  </style>
+  /* cta bands */
+  .band-cobre{background:linear-gradient(135deg,var(--cobre),var(--cobre2));padding:clamp(48px,6vw,68px) clamp(20px,5vw,40px);text-align:center}
+  .band-cobre h2{color:#fff;font-weight:800;font-size:clamp(1.5rem,2.8vw,2.1rem);margin-bottom:12px}
+  .band-cobre p{color:rgba(255,255,255,.92);margin-bottom:28px;font-size:1.05rem}
+  .band-navy{background:linear-gradient(135deg,var(--navy),var(--navy2));padding:clamp(56px,7vw,80px) clamp(20px,5vw,40px);text-align:center}
+  .band-navy .eyebrow{color:var(--cobre-l)}
+  .band-navy h2{color:#fff;font-weight:800;font-size:clamp(1.6rem,3vw,2.4rem);margin-bottom:14px;line-height:1.15}
+  .band-navy h2 span{color:var(--cobre-l)}
+  .band-navy p{color:rgba(255,255,255,.65);max-width:520px;margin:0 auto 34px;font-size:1.05rem;line-height:1.6}
+  .chips{display:flex;gap:13px;justify-content:center;flex-wrap:wrap;max-width:760px;margin:0 auto}
+  .chip{padding:13px 22px;border-radius:50px;font-weight:700;font-size:14px;display:inline-flex;align-items:center;gap:8px}
+  .chip.solid{background:var(--cobre);color:#fff}
+  .chip.solid:hover{background:var(--cobre2)}
+  .chip.line{background:transparent;color:#fff;border:2px solid rgba(255,255,255,.3)}
+  .chip.white{background:#fff;color:var(--cobre2)}
+  .chip.wline{background:transparent;color:#fff;border:2px solid rgba(255,255,255,.7)}
+
+  /* depoimentos */
+  #depoimentos{background:var(--cream)}
+  .rev-head{display:flex;align-items:center;justify-content:space-between;gap:24px;flex-wrap:wrap;margin-bottom:40px}
+  .score{display:flex;align-items:center;gap:16px;background:#fff;border:1px solid var(--line);border-radius:16px;padding:16px 22px;box-shadow:0 4px 18px rgba(12,27,56,.05)}
+  .score .n{font-family:'Sora',sans-serif;font-weight:800;font-size:2.4rem;color:var(--navy);line-height:1}
+  .score .stars{color:#f5b301;font-size:17px;letter-spacing:2px}
+  .score .sub{font-size:12.5px;color:var(--muted);font-weight:600;margin-top:3px}
+  .score .g{font-family:'Sora',sans-serif;font-weight:800;font-size:22px;color:#4285F4}
+  .rev-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(290px,1fr));gap:20px}
+  .rev{background:#fff;border:1px solid var(--line);border-radius:18px;padding:26px}
+  .rev .top{display:flex;align-items:center;justify-content:space-between;margin-bottom:14px}
+  .rev .who{display:flex;align-items:center;gap:12px}
+  .rev .av{width:42px;height:42px;border-radius:50%;color:#fff;display:flex;align-items:center;justify-content:center;font-family:'Sora',sans-serif;font-weight:700}
+  .rev .nm{font-weight:700;color:var(--navy);font-size:14.5px}
+  .rev .dt{font-size:12px;color:#9aa3b2}
+  .rev .g{font-family:'Sora',sans-serif;font-weight:800;color:#4285F4;font-size:17px}
+  .rev .st{color:#f5b301;font-size:14px;letter-spacing:1px;margin-bottom:8px}
+  .rev p{color:#475569;font-size:14.5px;line-height:1.6}
+
+  /* parceiros */
+  #parceiros{background:#fff}
+  .partners{display:flex;flex-wrap:wrap;gap:16px;justify-content:center}
+  .partner{background:var(--cream);border:1.5px solid transparent;border-radius:14px;padding:18px 32px;font-family:'Sora',sans-serif;font-weight:700;font-size:17px;color:var(--navy2);transition:all .2s}
+  .partner:hover{border-color:var(--cobre);color:var(--cobre)}
+
+  /* contato */
+  #contato{background:linear-gradient(135deg,var(--navy),var(--navy2))}
+  .contato-grid{display:grid;grid-template-columns:1fr 1fr;gap:clamp(36px,5vw,60px);align-items:center;max-width:1100px;margin:0 auto}
+  .contato-info h2{color:#fff;font-weight:800;font-size:clamp(1.8rem,3vw,2.4rem);margin-bottom:16px;line-height:1.15}
+  .contato-info p{color:rgba(255,255,255,.78);font-size:1.05rem;line-height:1.65;margin-bottom:30px}
+  .ci{display:flex;align-items:center;gap:13px;color:#fff;margin-bottom:16px}
+  .ci .ic{width:40px;height:40px;border-radius:50%;background:rgba(255,255,255,.12);display:flex;align-items:center;justify-content:center;flex:none}
+  .ci span,.ci a{font-weight:600;font-size:15px;color:#fff}
+  .ci.addr span{font-weight:500;font-size:14.5px;line-height:1.5;color:rgba(255,255,255,.9)}
+  .form{background:#fff;border-radius:24px;padding:clamp(26px,3vw,38px);box-shadow:0 24px 64px rgba(0,0,0,.25)}
+  .form .row{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+  .form input,.form select{width:100%;padding:14px 16px;border:1.5px solid #e2ddd1;border-radius:11px;font-size:14.5px;color:var(--ink);outline:none;font-family:inherit;background:#fff;margin-bottom:14px;transition:border .2s}
+  .form input:focus,.form select:focus{border-color:var(--cobre)}
+  .form button{width:100%;background:var(--wa);color:#fff;border:none;padding:16px;border-radius:11px;font-size:15px;font-weight:700;cursor:pointer;display:inline-flex;align-items:center;justify-content:center;gap:9px;margin-top:4px}
+  .form button:hover{background:var(--wa2)}
+
+  /* footer */
+  footer{background:#0a1730;color:#fff;padding:clamp(48px,6vw,64px) clamp(20px,5vw,40px) 30px}
+  .foot-grid{display:grid;grid-template-columns:2fr 1fr 1fr;gap:clamp(32px,4vw,48px);margin-bottom:44px}
+  .foot-brand .top{display:flex;align-items:center;gap:12px;margin-bottom:18px}
+  .foot-brand img{height:48px;width:48px;border-radius:11px;object-fit:cover}
+  .foot-brand .bt b{font-family:'Sora',sans-serif;font-weight:800;font-size:17px;color:#fff}
+  .foot-brand .bt span{font-size:11px;letter-spacing:2px;color:var(--cobre);font-weight:600}
+  .foot-brand p{color:rgba(255,255,255,.6);font-size:14px;line-height:1.65;margin-bottom:20px;max-width:340px}
+  .foot-col h4{font-size:14px;font-weight:700;margin-bottom:18px;color:#fff}
+  .foot-col .lk{display:flex;flex-direction:column;gap:11px}
+  .foot-col a{color:rgba(255,255,255,.58);font-size:14px}
+  .foot-col a:hover{color:var(--cobre)}
+  .foot-bottom{border-top:1px solid rgba(255,255,255,.1);padding-top:26px}
+  .legal{font-size:11.5px;color:rgba(255,255,255,.4);line-height:1.65;margin-bottom:16px}
+  .copy{font-size:12px;color:rgba(255,255,255,.42);text-align:center}
+
+  /* whatsapp float */
+  .wa-float{position:fixed;bottom:24px;right:24px;z-index:1200;width:60px;height:60px;background:var(--wa);border-radius:50%;display:flex;align-items:center;justify-content:center;box-shadow:0 6px 24px rgba(31,157,87,.5)}
+  .wa-float .pulse{position:absolute;inset:-5px;border-radius:50%;background:rgba(31,157,87,.45);animation:pulse 2.2s infinite}
+  .wa-float svg{position:relative}
+  @keyframes pulse{0%,100%{transform:scale(1);opacity:.55}50%{transform:scale(1.55);opacity:0}}
+
+  /* responsive */
+  @media(max-width:860px){
+    .hero-grid{grid-template-columns:1fr}
+    .contato-grid{grid-template-columns:1fr}
+    .foot-grid{grid-template-columns:1fr 1fr}
+  }
+  @media(max-width:680px){
+    .menu .txt-link{display:none}
+    .form .row{grid-template-columns:1fr}
+    .foot-grid{grid-template-columns:1fr}
+    #inicio h1{font-size:2.1rem}
+  }
+</style>
 </head>
 <body>
 
-<!-- NAV -->
-<nav id="navbar">
-  <div class="nav-logo">
-    <img src="logo.jpg" alt="M Promotora de Crédito" />
-  </div>
-  <ul class="nav-links" id="navLinks">
-    <li><a href="#inicio">Início</a></li>
-    <li><a href="#simule">Simule</a></li>
-    <li><a href="#servicos">Serviços</a></li>
-    <li><a href="#parceiros">Parceiros</a></li>
-    <li><a href="#depoimentos">Avaliações</a></li>
-    <li><a href="#contato">Contato</a></li>
-  </ul>
-  <a href="#simule" class="nav-cta">Simular Agora</a>
-  <div class="hamburger" onclick="toggleNav()">
-    <span></span><span></span><span></span>
-  </div>
-</nav>
+<!-- UTILITY BAR -->
+<div class="ubar">
+  <span><span class="dot"></span>Correspondente bancário certificado</span>
+  <span class="sep">•</span>
+  <span>Av. Amaral Peixoto, 228 — Centro, Volta Redonda/RJ</span>
+  <span class="sep">•</span>
+  <a href="tel:+5524988181891">(24) 98818-1891</a>
+</div>
+
+<!-- HEADER -->
+<header>
+  <nav class="nav wrap" aria-label="Menu principal">
+    <a href="#inicio" class="brand">
+      <img src="logo.jpg" alt="M Promotora de Crédito - consignado em Volta Redonda/RJ" />
+      <span class="bt"><b>M Promotora</b><span>de Crédito</span></span>
+    </a>
+    <div class="menu">
+      <a class="txt-link" href="#simule">Simule</a>
+      <a class="txt-link" href="#servicos">Serviços</a>
+      <a class="txt-link" href="#parceiros">Parceiros</a>
+      <a class="txt-link" href="#depoimentos">Avaliações</a>
+      <a class="txt-link" href="#contato">Contato</a>
+      <a class="cta" href="https://wa.me/5524988181891?text=Ol%C3%A1!%20Quero%20simular%20um%20empr%C3%A9stimo%20consignado." target="_blank" rel="noopener">
+        <svg width="17" height="17" viewBox="0 0 32 32" fill="currentColor" aria-hidden="true"><path d="M16 3C8.8 3 3 8.8 3 16c0 2.4.6 4.6 1.8 6.6L3 29l6.6-1.7c1.9 1 4.1 1.6 6.4 1.6 7.2 0 13-5.8 13-13S23.2 3 16 3zm0 23.6c-2.1 0-4.1-.6-5.8-1.6l-.4-.2-3.9 1 1-3.8-.3-.4C5.6 20.1 5 18.1 5 16 5 9.9 9.9 5 16 5s11 4.9 11 11-4.9 10.6-11 10.6zm6-7.9c-.3-.2-1.9-.9-2.2-1-.3-.1-.5-.2-.7.2-.2.3-.8 1-1 1.2-.2.2-.4.2-.7.1-.3-.2-1.4-.5-2.6-1.6-1-.9-1.6-1.9-1.8-2.3-.2-.3 0-.5.1-.7.1-.1.3-.4.5-.6.1-.2.2-.3.3-.5.1-.2 0-.4 0-.6-.1-.2-.7-1.7-1-2.3-.3-.6-.5-.5-.7-.5h-.6c-.2 0-.5.1-.8.4-.3.3-1 1-1 2.5s1.1 2.9 1.2 3.1c.2.2 2.1 3.3 5.2 4.6.7.3 1.3.5 1.7.6.7.2 1.4.2 1.9.1.6-.1 1.9-.8 2.1-1.5.3-.7.3-1.4.2-1.5-.1-.1-.3-.2-.6-.3z"/></svg>
+        Falar agora
+      </a>
+    </div>
+  </nav>
+</header>
 
 <!-- HERO -->
 <section id="inicio">
-  <div class="hero-content">
-    <div class="hero-badge"><i class="fas fa-shield-check"></i> Correspondente Bancário Certificado</div>
-    <h1>Crédito rápido e<br /><span>sem burocracia</span></h1>
-    <p>Aposentados, pensionistas e trabalhadores CLT: realize seus sonhos com as melhores taxas do mercado e aprovação na hora.</p>
-    <div class="hero-btns">
-      <a href="https://wa.me/5524988181891?text=Ol%C3%A1%21%20Quero%20simular%20um%20empr%C3%A9stimo%20consignado." class="btn-primary" target="_blank" rel="noopener noreferrer">
-        <i class="fab fa-whatsapp"></i> Falar Agora
-      </a>
-      <a href="#simule" class="btn-secondary">
-        <i class="fas fa-calculator"></i> Simular Crédito
-      </a>
+  <div class="hero-grid wrap">
+    <div>
+      <div class="badge">
+        <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#f0b483" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 2 4 5v6c0 5 3.4 8.5 8 11 4.6-2.5 8-6 8-11V5z"/><path d="m9 12 2 2 4-4"/></svg>
+        Correspondente Bancário Certificado
+      </div>
+      <h1>Crédito consignado rápido e <span>sem burocracia</span> em Volta Redonda</h1>
+      <p class="hero-sub">Aposentados, pensionistas do INSS e trabalhadores CLT: realize seus planos com as melhores taxas da região e aprovação no mesmo dia.</p>
+      <div class="hero-btns">
+        <a class="btn btn-cobre" href="https://wa.me/5524988181891?text=Ol%C3%A1!%20Quero%20simular%20um%20empr%C3%A9stimo%20consignado." target="_blank" rel="noopener">
+          <svg width="20" height="20" viewBox="0 0 32 32" fill="currentColor" aria-hidden="true"><path d="M16 3C8.8 3 3 8.8 3 16c0 2.4.6 4.6 1.8 6.6L3 29l6.6-1.7c1.9 1 4.1 1.6 6.4 1.6 7.2 0 13-5.8 13-13S23.2 3 16 3zm0 23.6c-2.1 0-4.1-.6-5.8-1.6l-.4-.2-3.9 1 1-3.8-.3-.4C5.6 20.1 5 18.1 5 16 5 9.9 9.9 5 16 5s11 4.9 11 11-4.9 10.6-11 10.6zm6-7.9c-.3-.2-1.9-.9-2.2-1-.3-.1-.5-.2-.7.2-.2.3-.8 1-1 1.2-.2.2-.4.2-.7.1-.3-.2-1.4-.5-2.6-1.6-1-.9-1.6-1.9-1.8-2.3-.2-.3 0-.5.1-.7.1-.1.3-.4.5-.6.1-.2.2-.3.3-.5.1-.2 0-.4 0-.6-.1-.2-.7-1.7-1-2.3-.3-.6-.5-.5-.7-.5h-.6c-.2 0-.5.1-.8.4-.3.3-1 1-1 2.5s1.1 2.9 1.2 3.1c.2.2 2.1 3.3 5.2 4.6.7.3 1.3.5 1.7.6.7.2 1.4.2 1.9.1.6-.1 1.9-.8 2.1-1.5.3-.7.3-1.4.2-1.5-.1-.1-.3-.2-.6-.3z"/></svg>
+          Falar no WhatsApp
+        </a>
+        <a class="btn btn-ghost" href="#simule">
+          <svg width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="4" y="2" width="16" height="20" rx="2"/><line x1="8" y1="6" x2="16" y2="6"/><line x1="8" y1="11" x2="8" y2="11"/><line x1="16" y1="11" x2="16" y2="11"/><line x1="8" y1="15" x2="8" y2="15"/></svg>
+          Simular crédito
+        </a>
+      </div>
+      <div class="hero-stats">
+        <div class="hstat"><b>+10 mil</b><span>Clientes atendidos</span></div>
+        <div class="vsep"></div>
+        <div class="hstat"><b>96x</b><span>Maior prazo</span></div>
+        <div class="vsep"></div>
+        <div class="hstat"><b>24h</b><span>Aprovação</span></div>
+      </div>
     </div>
-  </div>
-  <div class="hero-stats">
-    <div class="stat-card"><strong>+10 mil</strong><span>Clientes atendidos</span></div>
-    <div class="stat-card"><strong>96x</strong><span>Maior prazo do mercado</span></div>
-    <div class="stat-card"><strong>24h</strong><span>Aprovação rápida</span></div>
+    <div class="hero-cards">
+      <div class="gcard">
+        <div class="num">5,0</div>
+        <div>
+          <div class="stars">★★★★★</div>
+          <div class="sub">Avaliações reais no Google</div>
+        </div>
+        <div class="g">G</div>
+      </div>
+      <div class="hero-mini">
+        <div class="mini fill"><b>1,49%</b><span>Taxa a partir de (a.m.)</span></div>
+        <div class="mini glass"><b>Sem</b><span>consulta ao SPC/Serasa no CLT</span></div>
+      </div>
+      <div class="reg">
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#3fcf6b" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="m8.5 12 2.3 2.3 4.7-4.7"/></svg>
+        <span>Regulamentado pela <strong>Resolução nº 3.954 do Banco Central</strong></span>
+      </div>
+    </div>
   </div>
 </section>
 
 <!-- SIMULADOR -->
-<section id="simule">
-  <div class="section-header">
-    <div class="section-label">Sem compromisso</div>
-    <h2>Simule o Seu Empréstimo</h2>
-    <p>Em menos de 2 minutos descubra quanto você pode receber</p>
+<section id="simule" class="sec">
+  <div class="center-head">
+    <div class="eyebrow">Sem compromisso</div>
+    <h2 class="h2">Simule o seu empréstimo</h2>
+    <p class="lead">Em menos de 2 minutos você descobre quanto pode receber.</p>
   </div>
-  <div class="sim-wrapper">
-    <div class="sim-header">
-      <h3>Calculadora de Crédito</h3>
-      <p>Preencha os dados abaixo — é rápido e gratuito</p>
+  <div class="sim">
+    <div class="sim-head">
+      <h3>Calculadora de crédito</h3>
+      <p>Preencha os dados abaixo — é rápido e gratuito.</p>
     </div>
-    <div class="sim-steps">
-      <div class="sim-step active" id="step1"><div class="step-circle">1</div><span class="step-label">Identificação</span></div>
-      <div class="sim-step" id="step2"><div class="step-circle">2</div><span class="step-label">Telefone</span></div>
-      <div class="sim-step" id="step3"><div class="step-circle">3</div><span class="step-label">Produto</span></div>
-      <div class="sim-step" id="step4"><div class="step-circle">4</div><span class="step-label">Resultado</span></div>
+    <div class="steps">
+      <div class="step active" id="st1"><div class="circle">1</div><span class="lbl">Identificação</span></div>
+      <div class="step" id="st2"><div class="circle">2</div><span class="lbl">Telefone</span></div>
+      <div class="step" id="st3"><div class="circle">3</div><span class="lbl">Produto</span></div>
+      <div class="step" id="st4"><div class="circle">4</div><span class="lbl">Resultado</span></div>
     </div>
     <div class="sim-body">
-      <!-- Passo 1 -->
-      <div class="sim-page active" id="page1">
-        <div class="form-group"><label>Nome completo *</label><input type="text" id="sim-nome" placeholder="Digite o seu nome" /></div>
-        <div class="form-group"><label>E-mail *</label><input type="email" id="sim-email" placeholder="Digite o seu e-mail" /></div>
-        <div class="sim-nav"><button class="btn-sim-next" onclick="simNext(1)">Próximo <i class="fas fa-arrow-right"></i></button></div>
+      <div class="page active" id="pg1">
+        <div class="fg"><label>Nome completo *</label><input type="text" id="s-nome" placeholder="Digite o seu nome" autocomplete="name" /></div>
+        <div class="fg"><label>E-mail *</label><input type="email" id="s-email" placeholder="seu@email.com" autocomplete="email" /></div>
+        <div class="sim-nav" style="justify-content:flex-end"><button class="btn-next" onclick="simNext(1)">Próximo
+          <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></button></div>
       </div>
-      <!-- Passo 2 -->
-      <div class="sim-page" id="page2">
-        <div class="form-group"><label>WhatsApp / Celular *</label><input type="tel" id="sim-tel" placeholder="(00) 00000-0000" /></div>
+      <div class="page" id="pg2">
+        <div class="fg"><label>WhatsApp / Celular *</label><input type="tel" id="s-tel" placeholder="(24) 90000-0000" autocomplete="tel" /></div>
         <div class="sim-nav">
-          <button class="btn-sim-back" onclick="simBack(2)"><i class="fas fa-arrow-left"></i></button>
-          <button class="btn-sim-next" onclick="simNext(2)">Próximo <i class="fas fa-arrow-right"></i></button>
+          <button class="btn-back" onclick="simBack(2)">Voltar</button>
+          <button class="btn-next" onclick="simNext(2)">Próximo
+            <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></button>
         </div>
       </div>
-      <!-- Passo 3 -->
-      <div class="sim-page" id="page3">
-        <div class="form-group">
-          <label>Tipo de crédito *</label>
-          <select id="sim-produto">
+      <div class="page" id="pg3">
+        <div class="fg"><label>Tipo de crédito *</label>
+          <select id="s-prod">
             <option value="">Selecione...</option>
             <option value="inss">Aposentado / Pensionista INSS</option>
             <option value="clt">Trabalhador CLT</option>
@@ -421,22 +418,22 @@
             <option value="servidor">Servidor Público</option>
           </select>
         </div>
-        <div class="form-group">
-          <label>CPF <span style="color:var(--gray);font-weight:400">(opcional — agiliza a simulação)</span></label>
-          <input type="text" id="sim-cpf" placeholder="000.000.000-00" maxlength="14" />
-        </div>
+        <div class="fg"><label>CPF <span class="opt">(opcional — agiliza a simulação)</span></label><input type="text" id="s-cpf" placeholder="000.000.000-00" inputmode="numeric" maxlength="14" /></div>
         <div class="sim-nav">
-          <button class="btn-sim-back" onclick="simBack(3)"><i class="fas fa-arrow-left"></i></button>
-          <button class="btn-sim-next" onclick="simNext(3)" style="background:var(--orange)">Simular pelo WhatsApp <i class="fab fa-whatsapp"></i></button>
+          <button class="btn-back" onclick="simBack(3)">Voltar</button>
+          <button class="btn-next go" onclick="simNext(3)">
+            <svg width="19" height="19" viewBox="0 0 32 32" fill="currentColor"><path d="M16 3C8.8 3 3 8.8 3 16c0 2.4.6 4.6 1.8 6.6L3 29l6.6-1.7c1.9 1 4.1 1.6 6.4 1.6 7.2 0 13-5.8 13-13S23.2 3 16 3zm0 23.6c-2.1 0-4.1-.6-5.8-1.6l-.4-.2-3.9 1 1-3.8-.3-.4C5.6 20.1 5 18.1 5 16 5 9.9 9.9 5 16 5s11 4.9 11 11-4.9 10.6-11 10.6zm6-7.9c-.3-.2-1.9-.9-2.2-1-.3-.1-.5-.2-.7.2-.2.3-.8 1-1 1.2-.2.2-.4.2-.7.1-.3-.2-1.4-.5-2.6-1.6-1-.9-1.6-1.9-1.8-2.3-.2-.3 0-.5.1-.7.1-.1.3-.4.5-.6.1-.2.2-.3.3-.5.1-.2 0-.4 0-.6-.1-.2-.7-1.7-1-2.3-.3-.6-.5-.5-.7-.5h-.6c-.2 0-.5.1-.8.4-.3.3-1 1-1 2.5s1.1 2.9 1.2 3.1c.2.2 2.1 3.3 5.2 4.6.7.3 1.3.5 1.7.6.7.2 1.4.2 1.9.1.6-.1 1.9-.8 2.1-1.5.3-.7.3-1.4.2-1.5-.1-.1-.3-.2-.6-.3z"/></svg>
+            Simular pelo WhatsApp</button>
         </div>
       </div>
-      <!-- Passo 4 (fallback se popup bloqueado) -->
-      <div class="sim-page" id="page4">
-        <div class="resultado-box">
-          <i class="fas fa-check-circle"></i>
-          <h4>Abrindo WhatsApp... 🎉</h4>
-          <p>Ótimo, <strong id="res-nome"></strong>! Nossa assistente virtual Maria já está pronta para te atender. Se o WhatsApp não abriu automaticamente, clique abaixo:</p>
-          <a href="#" id="wpp-link" class="btn-wpp" target="_blank" rel="noopener noreferrer"><i class="fab fa-whatsapp"></i> Abrir WhatsApp</a>
+      <div class="page" id="pg4">
+        <div class="res">
+          <div class="ok"><svg width="38" height="38" viewBox="0 0 24 24" fill="none" stroke="#1f9d57" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="m8.5 12 2.3 2.3 4.7-4.7"/></svg></div>
+          <h4>Abrindo o WhatsApp...</h4>
+          <p>Ótimo, <strong id="res-nome"></strong>! Nossa equipe já está pronta para te atender. Se o WhatsApp não abriu, é só clicar abaixo.</p>
+          <a id="wa-link" class="btn btn-wa" href="#" target="_blank" rel="noopener">
+            <svg width="20" height="20" viewBox="0 0 32 32" fill="currentColor"><path d="M16 3C8.8 3 3 8.8 3 16c0 2.4.6 4.6 1.8 6.6L3 29l6.6-1.7c1.9 1 4.1 1.6 6.4 1.6 7.2 0 13-5.8 13-13S23.2 3 16 3zm0 23.6c-2.1 0-4.1-.6-5.8-1.6l-.4-.2-3.9 1 1-3.8-.3-.4C5.6 20.1 5 18.1 5 16 5 9.9 9.9 5 16 5s11 4.9 11 11-4.9 10.6-11 10.6zm6-7.9c-.3-.2-1.9-.9-2.2-1-.3-.1-.5-.2-.7.2-.2.3-.8 1-1 1.2-.2.2-.4.2-.7.1-.3-.2-1.4-.5-2.6-1.6-1-.9-1.6-1.9-1.8-2.3-.2-.3 0-.5.1-.7.1-.1.3-.4.5-.6.1-.2.2-.3.3-.5.1-.2 0-.4 0-.6-.1-.2-.7-1.7-1-2.3-.3-.6-.5-.5-.7-.5h-.6c-.2 0-.5.1-.8.4-.3.3-1 1-1 2.5s1.1 2.9 1.2 3.1c.2.2 2.1 3.3 5.2 4.6.7.3 1.3.5 1.7.6.7.2 1.4.2 1.9.1.6-.1 1.9-.8 2.1-1.5.3-.7.3-1.4.2-1.5-.1-.1-.3-.2-.6-.3z"/></svg>
+            Abrir WhatsApp</a>
         </div>
       </div>
     </div>
@@ -444,417 +441,297 @@
 </section>
 
 <!-- SERVIÇOS -->
-<section id="servicos">
-  <div class="section-header">
-    <div class="section-label">Transparência, taxas competitivas e agilidade</div>
-    <h2>Nossos Serviços</h2>
-    <p>Conheça as soluções financeiras disponíveis para você</p>
-  </div>
-  <div class="services-grid">
-    <div class="service-card">
-      <img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=600&q=80" alt="Portabilidade" />
-      <div class="service-card-overlay"></div>
-      <div class="service-badge">Portabilidade</div>
-      <div class="service-content">
-        <h3>Portabilidade de Consignado</h3>
+<section id="servicos" class="sec">
+  <div class="wrap">
+    <div class="center-head">
+      <div class="eyebrow">Transparência, taxa competitiva e agilidade</div>
+      <h2 class="h2">Nossos serviços</h2>
+      <p class="lead">Soluções de crédito consignado para cada perfil — escolha e fale com um especialista.</p>
+    </div>
+    <div class="grid-cards">
+      <article class="card">
+        <div class="ico"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="#cf6b2c" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 8h13M13 4l4 4-4 4"/><path d="M20 16H7M11 20l-4-4 4-4"/></svg></div>
+        <div class="tag">PORTABILIDADE</div>
+        <h3>Portabilidade de consignado</h3>
         <p>Migre seu contrato para uma instituição com taxas menores e ainda receba troco em dinheiro.</p>
-        <div class="service-actions">
-          <a href="https://wa.me/5524988181891?text=Ol%C3%A1%21%20Sou%20aposentado%20e%20quero%20fazer%20portabilidade%20do%20meu%20consignado." class="btn-contrate" target="_blank" rel="noopener noreferrer"><i class="fab fa-whatsapp"></i> Contrate Agora</a>
-          <a href="https://wa.me/5524988181891?text=Ol%C3%A1%21%20Sou%20aposentado%20e%20quero%20fazer%20portabilidade%20do%20meu%20consignado." class="service-arrow" target="_blank" rel="noopener noreferrer"><i class="fas fa-arrow-right"></i></a>
-        </div>
-      </div>
-    </div>
-    <div class="service-card">
-      <img src="https://images.unsplash.com/photo-1560250097-0b93528c311a?w=600&q=80" alt="Empréstimo Novo" />
-      <div class="service-card-overlay"></div>
-      <div class="service-badge">Empréstimo Novo</div>
-      <div class="service-content">
-        <h3>Empréstimo Novo INSS</h3>
+        <a class="more" href="https://wa.me/5524988181891?text=Ol%C3%A1!%20Sou%20aposentado%20e%20quero%20fazer%20portabilidade%20do%20meu%20consignado%20com%20taxa%20menor." target="_blank" rel="noopener">Simular agora <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+      </article>
+      <article class="card">
+        <div class="ico"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="#cf6b2c" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="6" width="20" height="12" rx="2"/><circle cx="12" cy="12" r="2.5"/><path d="M6 12h.01M18 12h.01"/></svg></div>
+        <div class="tag">EMPRÉSTIMO NOVO</div>
+        <h3>Empréstimo novo INSS</h3>
         <p>Crédito descontado direto no benefício, com análise rápida e até 96 parcelas.</p>
-        <div class="service-actions">
-          <a href="https://wa.me/5524988181891?text=Ol%C3%A1%21%20Sou%20aposentado%20e%20quero%20simular%20um%20empr%C3%A9stimo%20novo%20INSS." class="btn-contrate" target="_blank" rel="noopener noreferrer"><i class="fab fa-whatsapp"></i> Contrate Agora</a>
-          <a href="https://wa.me/5524988181891?text=Ol%C3%A1%21%20Sou%20aposentado%20e%20quero%20simular%20um%20empr%C3%A9stimo%20novo%20INSS." class="service-arrow" target="_blank" rel="noopener noreferrer"><i class="fas fa-arrow-right"></i></a>
-        </div>
-      </div>
-    </div>
-    <div class="service-card">
-      <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=600&q=80" alt="Refinanciamento" />
-      <div class="service-card-overlay"></div>
-      <div class="service-badge">Refin</div>
-      <div class="service-content">
+        <a class="more" href="https://wa.me/5524988181891?text=Ol%C3%A1!%20Sou%20aposentado%20e%20quero%20simular%20um%20empr%C3%A9stimo%20novo%20INSS." target="_blank" rel="noopener">Simular agora <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+      </article>
+      <article class="card">
+        <div class="ico"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="#cf6b2c" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 12a9 9 0 0 1 15-6.7L21 8"/><path d="M21 3v5h-5"/><path d="M21 12a9 9 0 0 1-15 6.7L3 16"/><path d="M3 21v-5h5"/></svg></div>
+        <div class="tag">REFIN</div>
         <h3>Refinanciamento</h3>
         <p>Reorganize prazos e parcelas para ganhar fôlego no orçamento e receber dinheiro extra.</p>
-        <div class="service-actions">
-          <a href="https://wa.me/5524988181891?text=Ol%C3%A1%21%20Sou%20aposentado%20e%20quero%20refinanciar%20meu%20contrato%20consignado." class="btn-contrate" target="_blank" rel="noopener noreferrer"><i class="fab fa-whatsapp"></i> Contrate Agora</a>
-          <a href="https://wa.me/5524988181891?text=Ol%C3%A1%21%20Sou%20aposentado%20e%20quero%20refinanciar%20meu%20contrato%20consignado." class="service-arrow" target="_blank" rel="noopener noreferrer"><i class="fas fa-arrow-right"></i></a>
-        </div>
-      </div>
-    </div>
-    <div class="service-card">
-      <img src="https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?w=600&q=80" alt="CLT" />
-      <div class="service-card-overlay"></div>
-      <div class="service-badge">CLT</div>
-      <div class="service-content">
+        <a class="more" href="https://wa.me/5524988181891?text=Ol%C3%A1!%20Sou%20aposentado%20e%20quero%20refinanciar%20meu%20contrato%20consignado." target="_blank" rel="noopener">Simular agora <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+      </article>
+      <article class="card">
+        <div class="ico"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="#cf6b2c" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="7" width="18" height="13" rx="2"/><path d="M8 7V5a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2"/></svg></div>
+        <div class="tag">CLT</div>
         <h3>Consignado CLT</h3>
-        <p>Crédito para trabalhadores com carteira assinada — desconto em folha, sem consulta ao SPC/Serasa.</p>
-        <div class="service-actions">
-          <a href="https://wa.me/5524988181891?text=Ol%C3%A1%21%20Sou%20trabalhador%20CLT%20e%20quero%20simular%20um%20empr%C3%A9stimo%20consignado." class="btn-contrate" target="_blank" rel="noopener noreferrer"><i class="fab fa-whatsapp"></i> Contrate Agora</a>
-          <a href="https://wa.me/5524988181891?text=Ol%C3%A1%21%20Sou%20trabalhador%20CLT%20e%20quero%20simular%20um%20empr%C3%A9stimo%20consignado." class="service-arrow" target="_blank" rel="noopener noreferrer"><i class="fas fa-arrow-right"></i></a>
-        </div>
-      </div>
-    </div>
-    <div class="service-card">
-      <img src="https://images.unsplash.com/photo-1531482615713-2afd69097998?w=600&q=80" alt="FGTS" />
-      <div class="service-card-overlay"></div>
-      <div class="service-badge">FGTS</div>
-      <div class="service-content">
+        <p>Para quem tem carteira assinada — desconto em folha, sem consulta ao SPC/Serasa.</p>
+        <a class="more" href="https://wa.me/5524988181891?text=Ol%C3%A1!%20Sou%20trabalhador%20CLT%20e%20quero%20simular%20um%20empr%C3%A9stimo%20consignado." target="_blank" rel="noopener">Simular agora <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+      </article>
+      <article class="card">
+        <div class="ico"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="#cf6b2c" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg></div>
+        <div class="tag">FGTS</div>
         <h3>Antecipação FGTS</h3>
-        <p>Antecipe o Saque-Aniversário com segurança e receba o valor em poucas horas na sua conta.</p>
-        <div class="service-actions">
-          <a href="https://wa.me/5524988181891?text=Ol%C3%A1%21%20Quero%20antecipar%20meu%20FGTS%20saque-anivers%C3%A1rio." class="btn-contrate" target="_blank" rel="noopener noreferrer"><i class="fab fa-whatsapp"></i> Contrate Agora</a>
-          <a href="https://wa.me/5524988181891?text=Ol%C3%A1%21%20Quero%20antecipar%20meu%20FGTS%20saque-anivers%C3%A1rio." class="service-arrow" target="_blank" rel="noopener noreferrer"><i class="fas fa-arrow-right"></i></a>
-        </div>
-      </div>
-    </div>
-    <div class="service-card">
-      <img src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=600&q=80" alt="Cartão Benefício" />
-      <div class="service-card-overlay"></div>
-      <div class="service-badge">Cartão</div>
-      <div class="service-content">
-        <h3>Cartão Benefício</h3>
+        <p>Antecipe o Saque-Aniversário com segurança e receba o valor em poucas horas na conta.</p>
+        <a class="more" href="https://wa.me/5524988181891?text=Ol%C3%A1!%20Quero%20antecipar%20meu%20FGTS%20saque-anivers%C3%A1rio." target="_blank" rel="noopener">Simular agora <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+      </article>
+      <article class="card">
+        <div class="ico"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="#cf6b2c" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="5" width="20" height="14" rx="2"/><path d="M2 10h20"/></svg></div>
+        <div class="tag">CARTÃO</div>
+        <h3>Cartão benefício</h3>
         <p>Mais liberdade para aposentados e servidores, com limite em folha e sem anuidade.</p>
-        <div class="service-actions">
-          <a href="https://wa.me/5524988181891?text=Ol%C3%A1%21%20Sou%20aposentado%20e%20quero%20saber%20sobre%20cart%C3%A3o%20benef%C3%ADcio%20consignado." class="btn-contrate" target="_blank" rel="noopener noreferrer"><i class="fab fa-whatsapp"></i> Contrate Agora</a>
-          <a href="https://wa.me/5524988181891?text=Ol%C3%A1%21%20Sou%20aposentado%20e%20quero%20saber%20sobre%20cart%C3%A3o%20benef%C3%ADcio%20consignado." class="service-arrow" target="_blank" rel="noopener noreferrer"><i class="fas fa-arrow-right"></i></a>
-        </div>
-      </div>
-    </div>
-    <div class="service-card" style="background: var(--navy-dark); position: relative; overflow: hidden;">
-      <div style="position: absolute; inset: 0; background: linear-gradient(135deg, var(--navy-dark) 0%, var(--navy-light) 100%);"></div>
-      <div class="service-content" style="position: relative; top: auto; bottom: auto; padding: 32px; display: flex; flex-direction: column; justify-content: center; height: 100%;">
-        <i class="fas fa-star" style="color: var(--orange); font-size: 2rem; margin-bottom: 16px;"></i>
-        <h3 style="font-size: 1.3rem; margin-bottom: 12px;">Por que escolher a M Promotora?</h3>
-        <p style="color: rgba(255,255,255,0.75); font-size: 14px; line-height: 1.7;">Centralize seus serviços financeiros em um só lugar. Reduzimos taxas, aceleramos aprovações e tratamos cada cliente como único. Mais de 10 mil famílias atendidas com transparência e cuidado.</p>
-      </div>
+        <a class="more" href="https://wa.me/5524988181891?text=Ol%C3%A1!%20Sou%20aposentado%20e%20quero%20saber%20sobre%20o%20cart%C3%A3o%20benef%C3%ADcio%20consignado." target="_blank" rel="noopener">Simular agora <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+      </article>
     </div>
   </div>
 </section>
 
 <!-- NÚMEROS -->
-<section id="numeros">
-  <div class="numeros-grid">
-    <div class="numero-item"><strong>+10mil</strong><span>Clientes atendidos</span></div>
-    <div class="numero-item"><strong>96x</strong><span>Maior prazo disponível</span></div>
-    <div class="numero-item"><strong>24h</strong><span>Aprovação média</span></div>
-    <div class="numero-item"><strong>1,49%</strong><span>Taxa a partir de (a.m.)</span></div>
+<section class="numbers">
+  <div class="g">
+    <div><b>+10 mil</b><span>Clientes atendidos</span></div>
+    <div><b>96x</b><span>Maior prazo disponível</span></div>
+    <div><b>24h</b><span>Aprovação média</span></div>
+    <div><b>1,49%</b><span>Taxa a partir de (a.m.)</span></div>
   </div>
 </section>
 
-<!-- CTA FAIXA 1 -->
-<section style="background: var(--orange); padding: 48px 5%; text-align: center;">
-  <h2 style="color:white; font-size: clamp(1.4rem,2.5vw,2rem); font-weight:800; margin-bottom:12px;">Quanto você pode receber hoje?</h2>
-  <p style="color:rgba(255,255,255,0.9); margin-bottom:28px; font-size:1rem;">Aposentados, pensionistas e trabalhadores CLT — descubra agora em segundos</p>
-  <div style="display:flex; gap:14px; justify-content:center; flex-wrap:wrap;">
-    <a href="https://wa.me/5524988181891?text=Ol%C3%A1%21%20Sou%20aposentado%20e%20quero%20simular%20um%20empr%C3%A9stimo%20INSS." target="_blank" rel="noopener noreferrer" style="background:white; color:var(--orange); padding:14px 28px; border-radius:50px; font-weight:800; text-decoration:none; font-size:15px; display:inline-flex; align-items:center; gap:8px;"><i class="fab fa-whatsapp"></i> Simular INSS</a>
-    <a href="https://wa.me/5524988181891?text=Ol%C3%A1%21%20Sou%20trabalhador%20CLT%20e%20quero%20simular%20consignado." target="_blank" rel="noopener noreferrer" style="background:transparent; color:white; padding:14px 28px; border-radius:50px; font-weight:800; text-decoration:none; font-size:15px; border:2px solid white; display:inline-flex; align-items:center; gap:8px;"><i class="fab fa-whatsapp"></i> Simular CLT</a>
-    <a href="https://wa.me/5524988181891?text=Ol%C3%A1%21%20Quero%20antecipar%20meu%20FGTS%20saque-anivers%C3%A1rio." target="_blank" rel="noopener noreferrer" style="background:transparent; color:white; padding:14px 28px; border-radius:50px; font-weight:800; text-decoration:none; font-size:15px; border:2px solid white; display:inline-flex; align-items:center; gap:8px;"><i class="fab fa-whatsapp"></i> Antecipar FGTS</a>
+<!-- CTA BAND 1 -->
+<section class="band-cobre">
+  <h2>Quanto você pode receber hoje?</h2>
+  <p>Aposentados, pensionistas e trabalhadores CLT — descubra em segundos.</p>
+  <div class="chips">
+    <a class="chip white" href="https://wa.me/5524988181891?text=Ol%C3%A1!%20Sou%20aposentado%20e%20quero%20simular%20um%20empr%C3%A9stimo%20INSS." target="_blank" rel="noopener">
+      <svg width="18" height="18" viewBox="0 0 32 32" fill="currentColor"><path d="M16 3C8.8 3 3 8.8 3 16c0 2.4.6 4.6 1.8 6.6L3 29l6.6-1.7c1.9 1 4.1 1.6 6.4 1.6 7.2 0 13-5.8 13-13S23.2 3 16 3zm0 23.6c-2.1 0-4.1-.6-5.8-1.6l-.4-.2-3.9 1 1-3.8-.3-.4C5.6 20.1 5 18.1 5 16 5 9.9 9.9 5 16 5s11 4.9 11 11-4.9 10.6-11 10.6zm6-7.9c-.3-.2-1.9-.9-2.2-1-.3-.1-.5-.2-.7.2-.2.3-.8 1-1 1.2-.2.2-.4.2-.7.1-.3-.2-1.4-.5-2.6-1.6-1-.9-1.6-1.9-1.8-2.3-.2-.3 0-.5.1-.7.1-.1.3-.4.5-.6.1-.2.2-.3.3-.5.1-.2 0-.4 0-.6-.1-.2-.7-1.7-1-2.3-.3-.6-.5-.5-.7-.5h-.6c-.2 0-.5.1-.8.4-.3.3-1 1-1 2.5s1.1 2.9 1.2 3.1c.2.2 2.1 3.3 5.2 4.6.7.3 1.3.5 1.7.6.7.2 1.4.2 1.9.1.6-.1 1.9-.8 2.1-1.5.3-.7.3-1.4.2-1.5-.1-.1-.3-.2-.6-.3z"/></svg>
+      Simular INSS</a>
+    <a class="chip wline" href="https://wa.me/5524988181891?text=Ol%C3%A1!%20Sou%20trabalhador%20CLT%20e%20quero%20simular%20um%20empr%C3%A9stimo%20consignado." target="_blank" rel="noopener">Simular CLT</a>
+    <a class="chip wline" href="https://wa.me/5524988181891?text=Ol%C3%A1!%20Quero%20antecipar%20meu%20FGTS%20saque-anivers%C3%A1rio." target="_blank" rel="noopener">Antecipar FGTS</a>
   </div>
 </section>
 
 <!-- DEPOIMENTOS -->
-<section id="depoimentos">
-  <div class="section-header">
-    <div class="section-label">O que dizem nossos clientes</div>
-    <h2>Avaliações Reais</h2>
-  </div>
-  <div class="reviews-header">
-    <div class="reviews-score">
-      <div class="score-label">EXCELENTE</div>
-      <div class="stars">★★★★★</div>
-      <p>Baseado em avaliações Google</p>
-    </div>
-  </div>
-  <div class="reviews-grid">
-    <div class="review-card">
-      <div class="review-top">
-        <div class="reviewer">
-          <div class="reviewer-avatar">M</div>
-          <div><div class="reviewer-name">Maria Santos</div><div class="reviewer-date">2025-10-15</div></div>
-        </div>
-        <span style="color:#4285F4; font-weight: 800; font-size: 18px;">G</span>
+<section id="depoimentos" class="sec">
+  <div class="wrap">
+    <div class="rev-head">
+      <div>
+        <div class="eyebrow">O que dizem nossos clientes</div>
+        <h2 class="h2">Avaliações reais</h2>
       </div>
-      <div class="review-stars">★★★★★</div>
-      <p class="review-text" style="margin-top:8px">Atendimento impecável! Consegui minha portabilidade em menos de 2 dias. Recomendo muito a M Promotora!</p>
-    </div>
-    <div class="review-card">
-      <div class="review-top">
-        <div class="reviewer">
-          <div class="reviewer-avatar" style="background:var(--teal)">J</div>
-          <div><div class="reviewer-name">José Oliveira</div><div class="reviewer-date">2025-09-22</div></div>
-        </div>
-        <span style="color:#4285F4; font-weight: 800; font-size: 18px;">G</span>
+      <div class="score">
+        <div class="n">5,0</div>
+        <div><div class="stars">★★★★★</div><div class="sub">Avaliações no Google</div></div>
+        <div class="g">G</div>
       </div>
-      <div class="review-stars">★★★★★</div>
-      <p class="review-text" style="margin-top:8px">Seriedade e rapidez. Me explicaram tudo direitinho, sem enrolação. Recebi o dinheiro no dia seguinte!</p>
     </div>
-    <div class="review-card">
-      <div class="review-top">
-        <div class="reviewer">
-          <div class="reviewer-avatar" style="background:var(--orange)">A</div>
-          <div><div class="reviewer-name">Ana Paula Ferreira</div><div class="reviewer-date">2025-08-30</div></div>
-        </div>
-        <span style="color:#4285F4; font-weight: 800; font-size: 18px;">G</span>
-      </div>
-      <div class="review-stars">★★★★★</div>
-      <p class="review-text" style="margin-top:8px">Fui super bem atendida. Consegui fazer meu empréstimo consignado com a menor taxa que já vi. Nota 10!</p>
+    <div class="rev-grid">
+      <article class="rev">
+        <div class="top"><div class="who"><div class="av" style="background:#16356b">M</div><div><div class="nm">Maria Santos</div><div class="dt">15/10/2025</div></div></div><span class="g">G</span></div>
+        <div class="st">★★★★★</div>
+        <p>Atendimento impecável! Consegui minha portabilidade em menos de 2 dias. Recomendo muito a M Promotora!</p>
+      </article>
+      <article class="rev">
+        <div class="top"><div class="who"><div class="av" style="background:#cf6b2c">J</div><div><div class="nm">José Oliveira</div><div class="dt">22/09/2025</div></div></div><span class="g">G</span></div>
+        <div class="st">★★★★★</div>
+        <p>Seriedade e rapidez. Me explicaram tudo direitinho, sem enrolação. Recebi o dinheiro no dia seguinte!</p>
+      </article>
+      <article class="rev">
+        <div class="top"><div class="who"><div class="av" style="background:#1f9d57">A</div><div><div class="nm">Ana Paula Ferreira</div><div class="dt">30/08/2025</div></div></div><span class="g">G</span></div>
+        <div class="st">★★★★★</div>
+        <p>Fui super bem atendida. Consegui meu consignado com a menor taxa que já vi. Nota 10!</p>
+      </article>
     </div>
   </div>
 </section>
 
-<!-- CTA FAIXA 2 -->
-<section style="background: var(--navy-dark); padding: 56px 5%; text-align: center;">
-  <p style="color:var(--teal); font-size:13px; font-weight:700; letter-spacing:2px; text-transform:uppercase; margin-bottom:12px;">Não perca tempo</p>
-  <h2 style="color:white; font-size: clamp(1.6rem,3vw,2.4rem); font-weight:900; margin-bottom:14px;">Pronto para contratar?<br/>Nossa equipe atende <span style="color:var(--orange)">agora mesmo</span></h2>
-  <p style="color:rgba(255,255,255,0.65); max-width:500px; margin:0 auto 36px; font-size:1rem; line-height:1.7;">Clique no serviço desejado e fale direto com um especialista pelo WhatsApp — sem filas, sem espera.</p>
-  <div style="display:flex; gap:14px; justify-content:center; flex-wrap:wrap; max-width:700px; margin:0 auto;">
-    <a href="https://wa.me/5524988181891?text=Ol%C3%A1%21%20Quero%20contratar%20portabilidade%20consignado." target="_blank" rel="noopener noreferrer" style="background:var(--orange); color:white; padding:13px 22px; border-radius:50px; font-weight:800; text-decoration:none; font-size:14px; display:inline-flex; align-items:center; gap:7px;"><i class="fab fa-whatsapp"></i> Portabilidade</a>
-    <a href="https://wa.me/5524988181891?text=Ol%C3%A1%21%20Sou%20aposentado%20e%20quero%20contratar%20empr%C3%A9stimo%20novo%20INSS." target="_blank" rel="noopener noreferrer" style="background:var(--orange); color:white; padding:13px 22px; border-radius:50px; font-weight:800; text-decoration:none; font-size:14px; display:inline-flex; align-items:center; gap:7px;"><i class="fab fa-whatsapp"></i> Empréstimo Novo</a>
-    <a href="https://wa.me/5524988181891?text=Ol%C3%A1%21%20Sou%20trabalhador%20CLT%20e%20quero%20contratar%20consignado." target="_blank" rel="noopener noreferrer" style="background:var(--orange); color:white; padding:13px 22px; border-radius:50px; font-weight:800; text-decoration:none; font-size:14px; display:inline-flex; align-items:center; gap:7px;"><i class="fab fa-whatsapp"></i> Consignado CLT</a>
-    <a href="https://wa.me/5524988181891?text=Ol%C3%A1%21%20Quero%20contratar%20antecipa%C3%A7%C3%A3o%20do%20meu%20FGTS." target="_blank" rel="noopener noreferrer" style="background:var(--orange); color:white; padding:13px 22px; border-radius:50px; font-weight:800; text-decoration:none; font-size:14px; display:inline-flex; align-items:center; gap:7px;"><i class="fab fa-whatsapp"></i> Antecipação FGTS</a>
-    <a href="https://wa.me/5524988181891?text=Ol%C3%A1%21%20Sou%20aposentado%20e%20quero%20refinanciar%20meu%20contrato." target="_blank" rel="noopener noreferrer" style="background:transparent; color:white; padding:13px 22px; border-radius:50px; font-weight:800; text-decoration:none; font-size:14px; border:2px solid rgba(255,255,255,0.3); display:inline-flex; align-items:center; gap:7px;"><i class="fab fa-whatsapp"></i> Refinanciamento</a>
+<!-- CTA BAND 2 -->
+<section class="band-navy">
+  <div class="eyebrow">Não perca tempo</div>
+  <h2>Pronto para contratar?<br>Nossa equipe atende <span>agora mesmo</span></h2>
+  <p>Clique no serviço desejado e fale direto com um especialista pelo WhatsApp — sem filas, sem espera.</p>
+  <div class="chips">
+    <a class="chip solid" href="https://wa.me/5524988181891?text=Ol%C3%A1!%20Sou%20aposentado%20e%20quero%20fazer%20portabilidade%20do%20meu%20consignado%20com%20taxa%20menor." target="_blank" rel="noopener">Portabilidade</a>
+    <a class="chip solid" href="https://wa.me/5524988181891?text=Ol%C3%A1!%20Sou%20aposentado%20e%20quero%20simular%20um%20empr%C3%A9stimo%20novo%20INSS." target="_blank" rel="noopener">Empréstimo Novo</a>
+    <a class="chip solid" href="https://wa.me/5524988181891?text=Ol%C3%A1!%20Sou%20trabalhador%20CLT%20e%20quero%20simular%20um%20empr%C3%A9stimo%20consignado." target="_blank" rel="noopener">Consignado CLT</a>
+    <a class="chip solid" href="https://wa.me/5524988181891?text=Ol%C3%A1!%20Quero%20antecipar%20meu%20FGTS%20saque-anivers%C3%A1rio." target="_blank" rel="noopener">Antecipação FGTS</a>
+    <a class="chip line" href="https://wa.me/5524988181891?text=Ol%C3%A1!%20Sou%20aposentado%20e%20quero%20refinanciar%20meu%20contrato%20consignado." target="_blank" rel="noopener">Refinanciamento</a>
   </div>
 </section>
 
 <!-- PARCEIROS -->
-<section id="parceiros">
-  <div class="section-header">
-    <div class="section-label">Instituições parceiras</div>
-    <h2>Nossos Parceiros</h2>
-    <p>Trabalhamos com as principais instituições financeiras do Brasil para garantir as melhores condições</p>
-  </div>
-  <div class="parceiros-logos">
-    <div class="parceiro-logo">JoinBank</div>
-    <div class="parceiro-logo">Facta</div>
-    <div class="parceiro-logo">Banco Pan</div>
-    <div class="parceiro-logo">BMG</div>
-    <div class="parceiro-logo">iCred</div>
-    <div class="parceiro-logo">Sabemi</div>
-    <div class="parceiro-logo">C6 Bank</div>
-    <div class="parceiro-logo">Bradesco</div>
+<section id="parceiros" class="sec">
+  <div class="wrap">
+    <div class="center-head">
+      <div class="eyebrow">Instituições parceiras</div>
+      <h2 class="h2">Nossos parceiros</h2>
+      <p class="lead">Trabalhamos com as principais instituições financeiras do Brasil para garantir as melhores condições.</p>
+    </div>
+    <div class="partners">
+      <div class="partner">JoinBank</div>
+      <div class="partner">Facta</div>
+      <div class="partner">Banco Pan</div>
+      <div class="partner">BMG</div>
+      <div class="partner">iCred</div>
+      <div class="partner">Sabemi</div>
+      <div class="partner">C6 Bank</div>
+      <div class="partner">Bradesco</div>
+    </div>
   </div>
 </section>
 
 <!-- CONTATO -->
-<section id="contato">
+<section id="contato" class="sec">
   <div class="contato-grid">
     <div class="contato-info">
       <h2>Atendimento rápido e fácil é aqui!</h2>
-      <p>Preencha o formulário ao lado ou nos chame diretamente no WhatsApp. Nossa equipe está pronta para atender você.</p>
-      <div class="contato-item"><i class="fas fa-phone"></i><span>(24) 98818-1891</span></div>
-      <div class="contato-item"><i class="fab fa-whatsapp"></i><a href="https://wa.me/5524988181891?text=Ol%C3%A1%21%20Quero%20simular%20um%20empr%C3%A9stimo%20consignado." target="_blank" rel="noopener noreferrer">(24) 98818-1891 (WhatsApp)</a></div>
-      <div class="contato-item"><i class="fas fa-envelope"></i><a href="mailto:sacmpromotora@gmail.com">sacmpromotora@gmail.com</a></div>
-      <div class="contato-item"><i class="fas fa-map-marker-alt"></i><span>Av. Amaral Peixoto, 228 — Centro, Volta Redonda/RJ — CEP 27253-220</span></div>
+      <p>Preencha o formulário ao lado ou fale direto no WhatsApp. Nossa equipe em Volta Redonda está pronta para te atender.</p>
+      <a class="ci" href="tel:+5524988181891"><span class="ic"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="#f0b483" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6 19.8 19.8 0 0 1-3.1-8.6A2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1 1 .4 1.9.7 2.8a2 2 0 0 1-.5 2.1L8.1 9.9a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.5c.9.3 1.8.6 2.8.7a2 2 0 0 1 1.7 2z"/></svg></span><span>(24) 98818-1891</span></a>
+      <a class="ci" href="https://wa.me/5524988181891?text=Ol%C3%A1!%20Quero%20simular%20um%20empr%C3%A9stimo%20consignado." target="_blank" rel="noopener"><span class="ic"><svg width="18" height="18" viewBox="0 0 32 32" fill="#3fcf6b"><path d="M16 3C8.8 3 3 8.8 3 16c0 2.4.6 4.6 1.8 6.6L3 29l6.6-1.7c1.9 1 4.1 1.6 6.4 1.6 7.2 0 13-5.8 13-13S23.2 3 16 3zm0 23.6c-2.1 0-4.1-.6-5.8-1.6l-.4-.2-3.9 1 1-3.8-.3-.4C5.6 20.1 5 18.1 5 16 5 9.9 9.9 5 16 5s11 4.9 11 11-4.9 10.6-11 10.6zm6-7.9c-.3-.2-1.9-.9-2.2-1-.3-.1-.5-.2-.7.2-.2.3-.8 1-1 1.2-.2.2-.4.2-.7.1-.3-.2-1.4-.5-2.6-1.6-1-.9-1.6-1.9-1.8-2.3-.2-.3 0-.5.1-.7.1-.1.3-.4.5-.6.1-.2.2-.3.3-.5.1-.2 0-.4 0-.6-.1-.2-.7-1.7-1-2.3-.3-.6-.5-.5-.7-.5h-.6c-.2 0-.5.1-.8.4-.3.3-1 1-1 2.5s1.1 2.9 1.2 3.1c.2.2 2.1 3.3 5.2 4.6.7.3 1.3.5 1.7.6.7.2 1.4.2 1.9.1.6-.1 1.9-.8 2.1-1.5.3-.7.3-1.4.2-1.5-.1-.1-.3-.2-.6-.3z"/></svg></span><span>(24) 98818-1891 no WhatsApp</span></a>
+      <a class="ci" href="mailto:sacmpromotora@gmail.com"><span class="ic"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="#f0b483" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-10 6L2 7"/></svg></span><span>sacmpromotora@gmail.com</span></a>
+      <div class="ci addr"><span class="ic"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="#f0b483" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0z"/><circle cx="12" cy="10" r="3"/></svg></span><span>Av. Amaral Peixoto, 228 — Centro<br>Volta Redonda/RJ — CEP 27253-220</span></div>
     </div>
-    <div class="contato-form">
-      <div class="form-row">
-        <input type="text" placeholder="Nome" id="ct-nome" />
-        <input type="text" placeholder="Sobrenome" />
+    <div class="form">
+      <div class="row">
+        <input type="text" id="c-nome" placeholder="Nome" autocomplete="given-name" />
+        <input type="text" id="c-sobr" placeholder="Sobrenome" autocomplete="family-name" />
       </div>
-      <div class="form-row">
-        <input type="tel" placeholder="(00) 00000-0000" id="ct-tel" />
-        <select id="ct-servico">
+      <div class="row">
+        <input type="tel" id="c-tel" placeholder="(24) 90000-0000" autocomplete="tel" />
+        <select id="c-serv">
           <option value="">Selecione o serviço</option>
           <option>Portabilidade INSS</option>
           <option>Empréstimo Novo INSS</option>
           <option>Refinanciamento</option>
           <option>Consignado CLT</option>
-          <option>FGTS</option>
+          <option>Antecipação FGTS</option>
           <option>Cartão Benefício</option>
         </select>
       </div>
-      <input type="email" placeholder="E-mail" />
-      <button onclick="enviarContato()">Enviar pelo WhatsApp <i class="fas fa-paper-plane"></i></button>
+      <input type="email" id="c-email" placeholder="E-mail" autocomplete="email" />
+      <button onclick="enviarContato()">
+        <svg width="19" height="19" viewBox="0 0 32 32" fill="currentColor"><path d="M16 3C8.8 3 3 8.8 3 16c0 2.4.6 4.6 1.8 6.6L3 29l6.6-1.7c1.9 1 4.1 1.6 6.4 1.6 7.2 0 13-5.8 13-13S23.2 3 16 3zm0 23.6c-2.1 0-4.1-.6-5.8-1.6l-.4-.2-3.9 1 1-3.8-.3-.4C5.6 20.1 5 18.1 5 16 5 9.9 9.9 5 16 5s11 4.9 11 11-4.9 10.6-11 10.6zm6-7.9c-.3-.2-1.9-.9-2.2-1-.3-.1-.5-.2-.7.2-.2.3-.8 1-1 1.2-.2.2-.4.2-.7.1-.3-.2-1.4-.5-2.6-1.6-1-.9-1.6-1.9-1.8-2.3-.2-.3 0-.5.1-.7.1-.1.3-.4.5-.6.1-.2.2-.3.3-.5.1-.2 0-.4 0-.6-.1-.2-.7-1.7-1-2.3-.3-.6-.5-.5-.7-.5h-.6c-.2 0-.5.1-.8.4-.3.3-1 1-1 2.5s1.1 2.9 1.2 3.1c.2.2 2.1 3.3 5.2 4.6.7.3 1.3.5 1.7.6.7.2 1.4.2 1.9.1.6-.1 1.9-.8 2.1-1.5.3-.7.3-1.4.2-1.5-.1-.1-.3-.2-.6-.3z"/></svg>
+        Enviar pelo WhatsApp</button>
     </div>
   </div>
 </section>
 
 <!-- FOOTER -->
 <footer>
-  <div class="footer-grid">
-    <div class="footer-brand">
-      <img src="logo.jpg" alt="M Promotora" />
-      <p>Correspondente bancário certificado pela Febraban. Atuamos com transparência, agilidade e as melhores taxas do mercado para aposentados, pensionistas e trabalhadores CLT.</p>
-      <a href="https://wa.me/5524988181891?text=Ol%C3%A1%21%20Quero%20simular%20um%20empr%C3%A9stimo%20consignado." class="footer-wpp" target="_blank" rel="noopener noreferrer"><i class="fab fa-whatsapp"></i> Fale no WhatsApp</a>
+  <div class="foot-grid wrap">
+    <div class="foot-brand">
+      <div class="top"><img src="logo.jpg" alt="M Promotora de Crédito" /><span class="bt"><b>M Promotora</b><br><span>DE CRÉDITO</span></span></div>
+      <p>Correspondente bancário certificado. Atuamos com transparência, agilidade e as melhores taxas para aposentados, pensionistas e trabalhadores CLT em Volta Redonda e região.</p>
+      <a class="btn btn-wa" href="https://wa.me/5524988181891?text=Ol%C3%A1!%20Quero%20simular%20um%20empr%C3%A9stimo%20consignado." target="_blank" rel="noopener" style="padding:11px 22px;font-size:14px">
+        <svg width="17" height="17" viewBox="0 0 32 32" fill="currentColor"><path d="M16 3C8.8 3 3 8.8 3 16c0 2.4.6 4.6 1.8 6.6L3 29l6.6-1.7c1.9 1 4.1 1.6 6.4 1.6 7.2 0 13-5.8 13-13S23.2 3 16 3zm0 23.6c-2.1 0-4.1-.6-5.8-1.6l-.4-.2-3.9 1 1-3.8-.3-.4C5.6 20.1 5 18.1 5 16 5 9.9 9.9 5 16 5s11 4.9 11 11-4.9 10.6-11 10.6zm6-7.9c-.3-.2-1.9-.9-2.2-1-.3-.1-.5-.2-.7.2-.2.3-.8 1-1 1.2-.2.2-.4.2-.7.1-.3-.2-1.4-.5-2.6-1.6-1-.9-1.6-1.9-1.8-2.3-.2-.3 0-.5.1-.7.1-.1.3-.4.5-.6.1-.2.2-.3.3-.5.1-.2 0-.4 0-.6-.1-.2-.7-1.7-1-2.3-.3-.6-.5-.5-.7-.5h-.6c-.2 0-.5.1-.8.4-.3.3-1 1-1 2.5s1.1 2.9 1.2 3.1c.2.2 2.1 3.3 5.2 4.6.7.3 1.3.5 1.7.6.7.2 1.4.2 1.9.1.6-.1 1.9-.8 2.1-1.5.3-.7.3-1.4.2-1.5-.1-.1-.3-.2-.6-.3z"/></svg>
+        Fale no WhatsApp</a>
     </div>
-    <div class="footer-col">
+    <div class="foot-col">
       <h4>Produtos</h4>
-      <ul>
-        <li><a href="#">Portabilidade</a></li>
-        <li><a href="#">Empréstimo Novo</a></li>
-        <li><a href="#">Refinanciamento</a></li>
-        <li><a href="#">Cartão Benefício</a></li>
-        <li><a href="#">Cartão Consignado</a></li>
-        <li><a href="#">FGTS</a></li>
-        <li><a href="#">Consignado CLT</a></li>
-      </ul>
+      <div class="lk">
+        <a href="https://wa.me/5524988181891?text=Ol%C3%A1!%20Quero%20portabilidade%20de%20consignado." target="_blank" rel="noopener">Portabilidade</a>
+        <a href="https://wa.me/5524988181891?text=Ol%C3%A1!%20Sou%20aposentado%20e%20quero%20simular%20um%20empr%C3%A9stimo%20novo%20INSS." target="_blank" rel="noopener">Empréstimo Novo INSS</a>
+        <a href="https://wa.me/5524988181891?text=Ol%C3%A1!%20Quero%20refinanciar%20meu%20contrato%20consignado." target="_blank" rel="noopener">Refinanciamento</a>
+        <a href="https://wa.me/5524988181891?text=Ol%C3%A1!%20Quero%20saber%20sobre%20o%20cart%C3%A3o%20benef%C3%ADcio%20consignado." target="_blank" rel="noopener">Cartão Benefício</a>
+        <a href="https://wa.me/5524988181891?text=Ol%C3%A1!%20Quero%20antecipar%20meu%20FGTS%20saque-anivers%C3%A1rio." target="_blank" rel="noopener">Antecipação FGTS</a>
+        <a href="https://wa.me/5524988181891?text=Ol%C3%A1!%20Sou%20trabalhador%20CLT%20e%20quero%20simular%20um%20consignado." target="_blank" rel="noopener">Consignado CLT</a>
+      </div>
     </div>
-    <div class="footer-col">
+    <div class="foot-col">
       <h4>Menu</h4>
-      <ul>
-        <li><a href="#inicio">Página Inicial</a></li>
-        <li><a href="#simule">Simule</a></li>
-        <li><a href="#servicos">Serviços</a></li>
-        <li><a href="#parceiros">Parceiros</a></li>
-        <li><a href="#depoimentos">Avaliações</a></li>
-        <li><a href="#contato">Contato</a></li>
-      </ul>
+      <div class="lk">
+        <a href="#inicio">Página Inicial</a>
+        <a href="#simule">Simule</a>
+        <a href="#servicos">Serviços</a>
+        <a href="#parceiros">Parceiros</a>
+        <a href="#depoimentos">Avaliações</a>
+        <a href="#contato">Contato</a>
+      </div>
     </div>
   </div>
-  <div class="footer-bottom">
-    <p class="footer-legal">A M Promotora de Crédito não é uma instituição financeira e não realiza operações de crédito diretamente. Atua como correspondente bancário para facilitar o processo de contratação de empréstimos, nos termos da Resolução nº 3.954 do Banco Central do Brasil. As taxas e condições praticadas são determinadas exclusivamente pelas instituições financeiras parceiras. CNPJ: 35.121.275/0001-68</p>
-    <p class="footer-copy">© 2026 M Promotora de Crédito. Todos os direitos reservados.</p>
+  <div class="foot-bottom wrap">
+    <p class="legal">A M Promotora de Crédito não é uma instituição financeira e não realiza operações de crédito diretamente. Atua como correspondente bancário para facilitar a contratação de empréstimos, nos termos da Resolução nº 3.954 do Banco Central do Brasil. As taxas e condições são determinadas exclusivamente pelas instituições financeiras parceiras. CNPJ: 35.121.275/0001-68</p>
+    <p class="copy">© 2026 M Promotora de Crédito. Todos os direitos reservados.</p>
   </div>
 </footer>
 
-<!-- WhatsApp Float -->
-<a href="https://wa.me/5524988181891?text=Ol%C3%A1%21%20Quero%20simular%20um%20empr%C3%A9stimo%20consignado." class="wpp-float" target="_blank" rel="noopener noreferrer">
-  <div class="wpp-pulse"></div>
-  <i class="fab fa-whatsapp"></i>
-</a>
-
-<!-- Mobile Sticky CTA bar -->
-<div id="mobile-cta" style="display:none; position:fixed; bottom:0; left:0; right:0; z-index:998; background:var(--navy-dark); padding:10px 16px; border-top:2px solid var(--orange); gap:8px; justify-content:center;">
-  <a href="https://wa.me/5524988181891?text=Ol%C3%A1%21%20Sou%20aposentado%20e%20quero%20simular%20empr%C3%A9stimo%20INSS." target="_blank" rel="noopener noreferrer" style="flex:1; background:var(--orange); color:white; padding:12px 8px; border-radius:10px; font-weight:800; text-decoration:none; font-size:13px; text-align:center; display:flex; align-items:center; justify-content:center; gap:5px;"><i class="fab fa-whatsapp"></i> Contratar INSS</a>
-  <a href="https://wa.me/5524988181891?text=Ol%C3%A1%21%20Quero%20contratar%20portabilidade%20consignado." target="_blank" rel="noopener noreferrer" style="flex:1; background:var(--teal); color:white; padding:12px 8px; border-radius:10px; font-weight:800; text-decoration:none; font-size:13px; text-align:center; display:flex; align-items:center; justify-content:center; gap:5px;"><i class="fab fa-whatsapp"></i> Portabilidade</a>
-</div>
-
-<!-- Simular Float -->
-<a href="#simule" class="simular-btn">
-  <i class="fas fa-calculator"></i>
-  SIMULAR<br/>CRÉDITO
+<!-- WHATSAPP FLOAT -->
+<a class="wa-float" href="https://wa.me/5524988181891?text=Ol%C3%A1!%20Quero%20simular%20um%20empr%C3%A9stimo%20consignado." target="_blank" rel="noopener" aria-label="Falar no WhatsApp">
+  <span class="pulse"></span>
+  <svg width="32" height="32" viewBox="0 0 32 32" fill="#fff"><path d="M16 3C8.8 3 3 8.8 3 16c0 2.4.6 4.6 1.8 6.6L3 29l6.6-1.7c1.9 1 4.1 1.6 6.4 1.6 7.2 0 13-5.8 13-13S23.2 3 16 3zm0 23.6c-2.1 0-4.1-.6-5.8-1.6l-.4-.2-3.9 1 1-3.8-.3-.4C5.6 20.1 5 18.1 5 16 5 9.9 9.9 5 16 5s11 4.9 11 11-4.9 10.6-11 10.6zm6-7.9c-.3-.2-1.9-.9-2.2-1-.3-.1-.5-.2-.7.2-.2.3-.8 1-1 1.2-.2.2-.4.2-.7.1-.3-.2-1.4-.5-2.6-1.6-1-.9-1.6-1.9-1.8-2.3-.2-.3 0-.5.1-.7.1-.1.3-.4.5-.6.1-.2.2-.3.3-.5.1-.2 0-.4 0-.6-.1-.2-.7-1.7-1-2.3-.3-.6-.5-.5-.7-.5h-.6c-.2 0-.5.1-.8.4-.3.3-1 1-1 2.5s1.1 2.9 1.2 3.1c.2.2 2.1 3.3 5.2 4.6.7.3 1.3.5 1.7.6.7.2 1.4.2 1.9.1.6-.1 1.9-.8 2.1-1.5.3-.7.3-1.4.2-1.5-.1-.1-.3-.2-.6-.3z"/></svg>
 </a>
 
 <script>
-  // NAV mobile
-  function toggleNav() { document.getElementById('navbar').classList.toggle('open'); }
+  var WA = '5524988181891';
+  var sim = {};
 
-  // Nav scroll
-  window.addEventListener('scroll', () => {
-    const nav = document.getElementById('navbar');
-    nav.style.background = window.scrollY > 50 ? 'rgba(15,30,61,0.98)' : 'var(--navy-dark)';
+  // máscara CPF
+  document.getElementById('s-cpf').addEventListener('input', function(e){
+    var v = e.target.value.replace(/\D/g,'').slice(0,11);
+    if(v.length>9) v=v.replace(/(\d{3})(\d{3})(\d{3})(\d{1,2})/,'$1.$2.$3-$4');
+    else if(v.length>6) v=v.replace(/(\d{3})(\d{3})(\d{1,3})/,'$1.$2.$3');
+    else if(v.length>3) v=v.replace(/(\d{3})(\d{1,3})/,'$1.$2');
+    e.target.value=v;
   });
 
-  // Smooth scroll para links do nav
-  document.querySelectorAll('a[href^="#"]').forEach(a => {
-    a.addEventListener('click', e => {
-      const target = document.querySelector(a.getAttribute('href'));
-      if (target) { e.preventDefault(); target.scrollIntoView({ behavior: 'smooth' }); }
-      document.getElementById('navbar').classList.remove('open');
-    });
-  });
-
-  // SIMULADOR
-  let simData = {};
-
-  // Máscara CPF
-  document.addEventListener('input', e => {
-    if (e.target.id === 'sim-cpf') {
-      let v = e.target.value.replace(/\D/g,'').slice(0,11);
-      if (v.length > 9) v = v.replace(/(\d{3})(\d{3})(\d{3})(\d{2})/,'$1.$2.$3-$4');
-      else if (v.length > 6) v = v.replace(/(\d{3})(\d{3})(\d+)/,'$1.$2.$3');
-      else if (v.length > 3) v = v.replace(/(\d{3})(\d+)/,'$1.$2');
-      e.target.value = v;
+  function setStep(n){
+    for(var i=1;i<=4;i++){
+      document.getElementById('pg'+i).classList.toggle('active', i===n);
+      var s=document.getElementById('st'+i);
+      s.classList.remove('active','done');
+      if(i===n) s.classList.add('active');
+      if(i<n) s.classList.add('done');
     }
-  });
-
-  function simNext(step) {
-    if (step === 1) {
-      const nome = document.getElementById('sim-nome').value.trim();
-      const email = document.getElementById('sim-email').value.trim();
-      if (!nome || !email) { alert('Por favor preencha nome e e-mail.'); return; }
-      simData.nome = nome; simData.email = email;
+  }
+  function simBack(step){ setStep(step-1); }
+  function simNext(step){
+    if(step===1){
+      var nome=document.getElementById('s-nome').value.trim();
+      var email=document.getElementById('s-email').value.trim();
+      if(!nome||!email){ alert('Por favor, preencha nome e e-mail.'); return; }
+      sim.nome=nome; sim.email=email;
     }
-    if (step === 2) {
-      const tel = document.getElementById('sim-tel').value.trim();
-      if (!tel) { alert('Por favor informe seu telefone.'); return; }
-      simData.tel = tel;
+    if(step===2){
+      var tel=document.getElementById('s-tel').value.trim();
+      if(!tel){ alert('Por favor, informe seu WhatsApp.'); return; }
+      sim.tel=tel;
     }
-    if (step === 3) {
-      const produto = document.getElementById('sim-produto').value;
-      if (!produto) { alert('Por favor selecione o tipo de crédito.'); return; }
-      simData.produto = produto;
-      simData.cpf = document.getElementById('sim-cpf').value.replace(/\D/g,'');
-
-      // Monta mensagem que aciona a Maria diretamente
-      const primeiroNome = simData.nome.split(' ')[0];
-      let msg = '';
-      if (simData.cpf.length === 11) {
-        // Com CPF: Maria já consulta automaticamente
-        msg = `Olá! Me chamo ${simData.nome} e quero simular um crédito. Meu CPF é ${simData.cpf}.`;
+    if(step===3){
+      var prod=document.getElementById('s-prod').value;
+      if(!prod){ alert('Por favor, selecione o tipo de crédito.'); return; }
+      var cpf=document.getElementById('s-cpf').value.replace(/\D/g,'');
+      var msg;
+      if(cpf.length===11){
+        msg='Olá! Me chamo '+sim.nome+' e quero simular um crédito consignado. Meu CPF é '+cpf+'. Meu WhatsApp: '+sim.tel+'.';
       } else {
-        // Sem CPF: apresenta contexto para Maria perguntar o CPF
-        const produtoTexto = {
-          inss: 'sou aposentado/pensionista INSS',
-          clt: 'sou trabalhador CLT',
-          fgts: 'quero antecipar meu FGTS',
-          servidor: 'sou servidor público',
-        }[produto] || 'quero simular um crédito';
-        msg = `Olá! Me chamo ${simData.nome} e ${produtoTexto}. Quero simular um empréstimo.`;
+        var pt={inss:'sou aposentado/pensionista do INSS',clt:'sou trabalhador CLT',fgts:'quero antecipar meu FGTS',servidor:'sou servidor público'}[prod]||'quero simular um crédito';
+        msg='Olá! Me chamo '+sim.nome+' e '+pt+'. Quero simular um empréstimo consignado. Meu WhatsApp: '+sim.tel+'.';
       }
-
-      const wppUrl = `https://wa.me/5524988181891?text=${encodeURIComponent(msg)}`;
-      document.getElementById('wpp-link').href = wppUrl;
-      document.getElementById('res-nome').textContent = primeiroNome;
-
-      // Redireciona direto (evita bloqueio de popup)
-      window.location.href = wppUrl;
+      var url='https://wa.me/'+WA+'?text='+encodeURIComponent(msg);
+      document.getElementById('wa-link').href=url;
+      document.getElementById('res-nome').textContent=sim.nome.split(' ')[0];
+      setStep(4);
+      window.open(url,'_blank');
       return;
     }
-    setSimStep(step + 1);
-  }
-  function simBack(step) { setSimStep(step - 1); }
-  function setSimStep(n) {
-    for (let i = 1; i <= 4; i++) {
-      document.getElementById(`page${i}`).classList.toggle('active', i === n);
-      const s = document.getElementById(`step${i}`);
-      s.classList.remove('active', 'done');
-      if (i === n) s.classList.add('active');
-      if (i < n) s.classList.add('done');
-    }
+    setStep(step+1);
   }
 
-  // CONTATO
-  function enviarContato() {
-    const nome = document.getElementById('ct-nome').value.trim();
-    const tel = document.getElementById('ct-tel').value.trim();
-    const servico = document.getElementById('ct-servico').value;
-    const msg = `Olá! Vim pelo site e gostaria de mais informações.\n\nNome: ${nome || 'Não informado'}\nTelefone: ${tel || 'Não informado'}\nServiço: ${servico || 'Não informado'}`;
-    window.location.href = `https://wa.me/5524988181891?text=${encodeURIComponent(msg)}`;
+  function enviarContato(){
+    var nome=(document.getElementById('c-nome').value+' '+document.getElementById('c-sobr').value).trim()||'Não informado';
+    var tel=document.getElementById('c-tel').value.trim()||'Não informado';
+    var serv=document.getElementById('c-serv').value||'Não informado';
+    var email=document.getElementById('c-email').value.trim()||'Não informado';
+    var msg='Olá! Vim pelo site e gostaria de mais informações.\n\nNome: '+nome+'\nWhatsApp: '+tel+'\nServiço: '+serv+'\nE-mail: '+email;
+    window.open('https://wa.me/'+WA+'?text='+encodeURIComponent(msg),'_blank');
   }
-
-  // Animação counters
-  const observeCounters = () => {
-    const counters = document.querySelectorAll('.numero-item strong');
-    const obs = new IntersectionObserver((entries) => {
-      entries.forEach(e => { if (e.isIntersecting) e.target.style.opacity = '1'; });
-    }, { threshold: 0.3 });
-    counters.forEach(c => obs.observe(c));
-  };
-  observeCounters();
-
-  // Mobile sticky CTA bar
-  const mobileCta = document.getElementById('mobile-cta');
-  function checkMobileCta() {
-    if (window.innerWidth <= 768) {
-      mobileCta.style.display = 'flex';
-      document.body.style.paddingBottom = '72px';
-    } else {
-      mobileCta.style.display = 'none';
-      document.body.style.paddingBottom = '';
-    }
-  }
-  checkMobileCta();
-  window.addEventListener('resize', checkMobileCta);
 </script>
 </body>
 </html>
