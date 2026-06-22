@@ -2,6 +2,7 @@ name: Deploy M Promotora Site
 
 on:
   push:
+  workflow_dispatch:
     branches: [main]
 
 jobs:
