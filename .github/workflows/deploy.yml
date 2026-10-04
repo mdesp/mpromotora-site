@@ -23,4 +23,5 @@ jobs:
             git pull origin main
             docker build -t mdesp/mpromotora-site:latest .
             docker stack deploy -c /root/docker-compose-mpromotora.yml mpromotora
+            docker service update --force --quiet --image mdesp/mpromotora-site:latest mpromotora_mpromotora
             echo "Deploy concluido — $(date)"
