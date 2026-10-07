@@ -34,3 +34,5 @@ Qualquer servidor estático na raiz, ex.: `python -m http.server 8000`.
 
 
 <!-- Security scan triggered at 2026-10-07 11:53:03 -->
+
+<!-- Security scan triggered at 2026-10-07 14:36:00 -->
