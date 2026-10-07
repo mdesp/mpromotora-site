@@ -31,3 +31,6 @@ Qualquer servidor estático na raiz, ex.: `python -m http.server 8000`.
 - Logo real em PNG/SVG (hoje `logo.jpg` como monograma).
 - Foto real da fachada/equipe na seção de contato.
 - Números promocionais (taxa a partir de, prazo máximo, 24h, +10 mil clientes) foram removidos em 04/10/2026. Só republicar com comprovação e com o disclaimer de correspondente bancário no rodapé.
+
+
+<!-- Security scan triggered at 2026-10-07 11:53:03 -->
