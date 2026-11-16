@@ -1,4 +1,6 @@
 User-agent: *
 Allow: /
+Disallow: /obrigado/
+Disallow: /404.html
 
 Sitemap: https://mpromotora.turboconversa.online/sitemap.xml
