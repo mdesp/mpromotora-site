@@ -16,7 +16,7 @@ jobs:
         with:
           host: ${{ secrets.VPS_HOST }}
           username: root
-          password: ${{ secrets.VPS_PASSWORD }}
+          key: ${{ secrets.VPS_SSH_KEY }}   # 22/11/2026: entrada por chave
           command_timeout: 120s
           script: |
             cd /opt/mpromotora-site
